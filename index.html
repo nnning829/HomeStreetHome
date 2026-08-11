@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 貧窮人的台中 ── 聆聽失序之聲</title>
+<meta name="description" content="2026 貧窮人的台中，第二屆大型貧窮倡議行動。主題「聆聽失序之聲」。11.15–11.29 於文化部文化資產園區 衙道堂 B05。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  /* 品牌字型：jf open 粉圓（jf-openhuninn，SIL OFL） */
+  @font-face{
+    font-family:'Huninn';
+    src:url('assets/jf-openhuninn.woff2') format('woff2');
+    font-weight:400 900;font-style:normal;font-display:swap;
+  }
+  :root{
+    --pink:#d94b8e;
+    --pink-deep:#b93877;
+    --pink-soft:#e884b2;
+    --ink:#17110f;
+    --ink-soft:#241b18;
+    --gold:#eab94a;
+    --gold-deep:#d19f30;
+    --cream:#f5eddf;
+    --cream-dim:#e7ddc9;
+    --paper:#faf4e9;
+    --white:#ffffff;
+    --maxw:1160px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Huninn',"Noto Sans TC",system-ui,sans-serif;
+    color:var(--cream);
+    background:var(--ink);
+    line-height:1.95;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4,.serif{font-family:'Huninn',"Noto Serif TC",serif;}
+  /* 減少中文孤字斷行 */
+  p{text-wrap:pretty}
+  h1,h2,h3,h4,.h-sec,.big-q{text-wrap:balance}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 30px;position:relative;z-index:3}
+  section{position:relative}
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:fixed;top:0;left:0;right:0;z-index:60;
+    display:flex;align-items:center;justify-content:flex-end;
+    padding:16px 32px;background:rgba(23,17,15,0);
+    transition:background .3s, padding .3s;
+  }
+  header.nav.solid{background:rgba(23,17,15,.92);padding:12px 32px;backdrop-filter:blur(8px);box-shadow:0 2px 24px rgba(0,0,0,.4)}
+  nav.links{display:flex;gap:28px;align-items:center}
+  nav.links a{font-size:.95rem;font-weight:500;color:var(--cream);transition:color .2s}
+  nav.links a:hover{color:var(--gold)}
+  nav.links a.cta{background:var(--gold);color:var(--ink);padding:9px 20px;border-radius:40px;font-weight:700}
+  nav.links a.cta:hover{background:var(--white)}
+  nav.links a.cta-pink{background:var(--pink);color:#fff;padding:9px 20px;border-radius:40px;font-weight:700}
+  nav.links a.cta-pink:hover{background:var(--pink-deep)}
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:2px;background:var(--cream)}
+  @media(max-width:860px){
+    nav.links{position:fixed;inset:0 0 0 auto;top:0;height:100vh;width:76%;max-width:320px;background:var(--ink-soft);flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);transition:transform .35s;padding:40px;box-shadow:-10px 0 40px rgba(0,0,0,.5)}
+    nav.links.open{transform:translateX(0)}
+    nav.links a{font-size:1.2rem}
+    .burger{display:flex;z-index:70}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100vh;display:flex;align-items:center;
+    background:#e04f95 url("assets/bg-pink.jpg") center/cover;
+    position:relative;overflow:hidden;padding:120px 0 90px;
+  }
+  /* 響應式雙欄：左文字、右星球，一起隨容器置中 */
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);align-items:center;gap:24px;width:100%}
+  .hero-art{position:relative;align-self:stretch;min-height:60vh}
+  .hero .blob{position:absolute;left:50%;top:50%;transform:translate(-40%,-50%);width:min(50vw,600px);height:auto;z-index:1;opacity:.97;filter:drop-shadow(0 24px 70px rgba(0,0,0,.45))}
+  .hero .blob.left{position:absolute;left:-3%;top:5%;transform:none;width:min(18vw,200px);height:auto;opacity:.4;z-index:1}
+  .hero-inner{position:relative;z-index:3;display:flex;flex-direction:column;align-items:flex-start;max-width:600px}
+  .htag{display:inline-flex;align-items:center;gap:14px;font-family:'Huninn',"Noto Serif TC";font-weight:700;
+    font-size:clamp(1rem,2.4vw,1.24rem);letter-spacing:.4em;color:var(--cream);
+    text-shadow:0 2px 10px rgba(23,17,15,.55);margin-bottom:26px;padding-left:.4em}
+  .htag::after{content:"";width:40px;height:2px;background:var(--gold);opacity:.9}
+  .hero h1{line-height:0;margin:0 0 26px}
+  .hero h1 img{width:100%;max-width:520px;filter:drop-shadow(3px 5px 4px rgba(23,17,15,.45))}
+  .hero-lead{font-family:'Huninn',"Noto Serif TC";color:var(--cream);font-size:clamp(1rem,1.9vw,1.14rem);line-height:2.05;max-width:26em;margin:0 0 30px;text-shadow:0 1px 6px rgba(23,17,15,.45)}
+  .date-star{position:relative;width:min(290px,70vw);aspect-ratio:1185/886;margin:2px 0 0;
+    background:url("assets/star.png") center/contain no-repeat;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-4deg)}
+  .date-star .dt{width:58%;filter:drop-shadow(1px 1px 0 rgba(255,255,255,.4))}
+  .date-star .p{font-family:'Huninn',"Noto Serif TC";font-weight:900;color:var(--ink);font-size:.9rem;margin-top:6px;text-align:center;line-height:1.5}
+  .hero-org{margin-top:30px;font-family:'Huninn',"Noto Serif TC";color:var(--cream);font-size:1.02rem;letter-spacing:.03em;text-shadow:0 1px 6px rgba(23,17,15,.4)}
+  .hero-org .k{color:var(--gold);font-weight:700;letter-spacing:.18em;margin-right:14px}
+  .scrib{position:absolute;pointer-events:none;z-index:2}
+  @media(max-width:900px){
+    .hero{padding-top:118px;text-align:center}
+    .hero-grid{grid-template-columns:1fr}
+    .hero-inner{align-items:center;max-width:600px;margin:0 auto}
+    .hero-lead,.date-star{margin-left:auto;margin-right:auto}
+    .hero-art{position:absolute;inset:0;min-height:0;z-index:1}
+    .hero .blob{left:50%;top:auto;bottom:-14%;transform:translateX(-50%);width:min(112vw,540px);opacity:.24}
+    .hero .blob.left{display:none}
+  }
+  @media(max-width:820px){.scrib.hide-m{display:none}}
+
+  /* ---------- SECTION SHELL ---------- */
+  .band{padding:104px 0}
+  .band.ink{background:var(--ink)}
+  .band.pink{background:#e04f95 url("assets/bg-pink.jpg") center/cover;color:var(--white)}
+  .band.paper{background:var(--paper);color:var(--ink)}
+  .band.dark{background:linear-gradient(180deg,#17110f,#221713)}
+  .h-sec{font-weight:900;font-size:clamp(2rem,5.2vw,3rem);letter-spacing:.04em;line-height:1.25;margin-bottom:14px;text-align:center}
+  .band.pink .h-sec{color:var(--white)}
+  .band.paper .h-sec{color:var(--ink)}
+  .sec-lead{font-size:1.1rem;max-width:44em;line-height:2.15;text-align:center;margin:0 auto 40px}
+  .accent{color:var(--gold);font-weight:700}
+  .band.paper .accent{color:var(--pink-deep)}
+
+  /* origin — 引言破題 */
+  .epigraph{position:relative;max-width:33em;margin:6px auto 40px;text-align:center}
+  .epigraph::before{content:"\201C";display:block;font-family:'Huninn',"Noto Serif TC";font-weight:900;font-size:3.4rem;line-height:.7;color:var(--gold);opacity:.65;margin-bottom:8px}
+  .epigraph p{font-family:'Huninn',"Noto Serif TC";font-weight:700;font-size:clamp(1.1rem,2vw,1.36rem);line-height:1.9;color:var(--ink);text-wrap:balance}
+  .epigraph cite{display:block;margin-top:20px;font-style:normal;font-weight:700;color:var(--pink-deep);font-size:1rem}
+  .origin-body{max-width:34em;margin:0 auto;font-size:1.06rem;line-height:2.2;text-align:center;color:#3a322e;text-wrap:pretty}
+  .origin-body .accent{color:var(--pink-deep)}
+  @media(max-width:820px){.epigraph{max-width:100%}.origin-body{text-align:left}}
+
+  /* pillars */
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .pillar{background:var(--ink-soft);border-radius:20px;padding:34px 28px;transition:transform .25s;text-align:center}
+  .pillar:hover{transform:translateY(-6px)}
+  .pillar .num{font-family:'Huninn',"Noto Serif TC";font-weight:900;font-size:2.4rem;color:var(--gold);line-height:1}
+  .pillar h3{font-size:1.35rem;margin:8px 0 14px;color:var(--white)}
+  .pillar p{color:var(--cream-dim);font-size:1rem;text-align:left}
+  @media(max-width:820px){.pillars{grid-template-columns:1fr}}
+
+  /* axis */
+  .axis-head{max-width:46em;margin:0 auto}
+  .big-q{font-family:'Huninn',"Noto Serif TC";font-weight:700;font-size:clamp(1.5rem,4vw,2.3rem);color:var(--gold);line-height:1.6;margin:0 0 22px;text-align:center}
+  .axis-head .lead-p{font-size:1.08rem;line-height:2.15;text-align:center}
+  .axis-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .axis-card{background:rgba(255,255,255,.05);border-radius:18px;padding:32px 28px}
+  .axis-card .n{font-family:'Huninn',"Noto Serif TC";font-weight:900;font-size:1.6rem;color:var(--gold)}
+  .axis-card h3{font-size:1.3rem;margin:6px 0 14px;color:var(--white)}
+  .axis-card p{font-size:1rem;color:var(--cream-dim);line-height:2}
+  .axis-card .qt{font-family:'Huninn',"Noto Serif TC";color:var(--pink-soft);font-size:.98rem;display:block;margin-bottom:12px;line-height:1.9;min-height:3.6em}
+  @media(max-width:820px){.axis-card .qt{min-height:0}}
+  @media(max-width:820px){.axis-grid{grid-template-columns:1fr}}
+
+  /* suffering — flip cards */
+  .flip-hint{text-align:center;color:#9a8578;font-size:.92rem;letter-spacing:.06em;margin-bottom:30px}
+  .flips{display:flex;align-items:stretch;justify-content:center;gap:0}
+  .flip{flex:1 1 0;min-width:0;perspective:1200px;height:260px;cursor:pointer}
+  .flip-conn{flex:0 0 auto;align-self:center;display:flex;align-items:center;justify-content:center;color:var(--gold);padding:0 10px}
+  .flip-conn svg{width:30px;height:30px;opacity:.85}
+  .flip-inner{position:relative;width:100%;height:100%;transition:transform .6s cubic-bezier(.4,.1,.2,1);transform-style:preserve-3d}
+  .flip:hover .flip-inner,.flip.flipped .flip-inner{transform:rotateY(180deg)}
+  .flip-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:22px;padding:26px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+  .flip-front{background:linear-gradient(158deg,#2c211c 0%,#17110f 100%);box-shadow:0 18px 40px rgba(23,17,15,.22)}
+  .flip-front .st{width:64px;height:64px;border-radius:50%;background:rgba(234,185,74,.13);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Huninn',"Noto Serif TC";font-weight:900;font-size:1.85rem;line-height:1}
+  .flip-front h4{font-size:1.3rem;color:var(--cream);margin-top:18px}
+  .flip-front .flip-ic{margin-top:18px;display:inline-flex;align-items:center;gap:6px;color:var(--gold);opacity:.72;font-size:.8rem;letter-spacing:.14em}
+  .flip-front .flip-ic svg{width:15px;height:15px}
+  .flip-back{background:linear-gradient(158deg,var(--pink),var(--pink-deep));color:var(--white);transform:rotateY(180deg);box-shadow:0 18px 40px rgba(217,75,142,.22)}
+  .flip-back p{font-size:1rem;line-height:1.9}
+  .flow-note{margin-top:46px;font-family:'Huninn',"Noto Serif TC";font-size:1.16rem;line-height:2.1;color:#4a3d38;max-width:46em;margin-left:auto;margin-right:auto;text-align:center}
+  @media(max-width:880px){.flips{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.flip-conn{display:none}}
+  @media(max-width:480px){.flips{grid-template-columns:1fr}.flip{height:220px}}
+
+  /* recap 2025 */
+  .recap-acts{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:8px}
+  .rcard{background:var(--ink-soft);border-radius:16px;overflow:hidden;transition:transform .25s}
+  .rcard:hover{transform:translateY(-6px)}
+  .rcard .ph{aspect-ratio:4/3;overflow:hidden;background:var(--ink)}
+  .rcard .ph img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+  .rcard:hover .ph img{transform:scale(1.07)}
+  .rcard .body{padding:16px 16px 20px}
+  .rcard h4{font-size:1.08rem;color:var(--gold);margin-bottom:6px}
+  .rcard p{font-size:.9rem;color:var(--cream-dim);line-height:1.75}
+  @media(max-width:980px){.recap-acts{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.recap-acts{grid-template-columns:1fr}}
+  .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:48px}
+  .stat{text-align:center;padding:24px 8px;background:rgba(234,185,74,.1);border-radius:16px}
+  .stat b{display:block;font-family:'Huninn',"Noto Serif TC";font-weight:900;font-size:2.4rem;color:var(--gold);line-height:1}
+  .stat span{font-size:.9rem;color:var(--cream);opacity:.92}
+  @media(max-width:820px){.stats{grid-template-columns:repeat(2,1fr)}}
+  .recap-close{margin-top:44px;font-family:'Huninn',"Noto Serif TC";font-size:1.2rem;color:var(--cream);text-align:center;line-height:2}
+
+  /* host org */
+  .host-toplogo{display:block;width:120px;height:auto;margin:0 auto 14px}
+  .host-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center}
+  .host-grid p{font-size:1.06rem;line-height:2.15;margin-bottom:18px}
+  .host-sub{font-family:'Huninn',"Noto Serif TC";font-weight:700;color:var(--pink-deep);font-size:1.15rem;margin-bottom:8px}
+  .chips{display:flex;flex-wrap:nowrap;gap:11px;margin-top:24px}
+  .chip{flex:none;white-space:nowrap;background:var(--pink);color:var(--white);font-family:'Huninn',"Noto Serif TC";font-weight:700;padding:10px 18px;border-radius:40px;font-size:1rem}
+  .host-media{display:flex;flex-direction:column;align-items:center;gap:20px}
+  .host-photo{position:relative;display:block;background:#fff;padding:12px 12px 30px;border-radius:5px;box-shadow:0 18px 42px rgba(23,17,15,.2);transform:rotate(-2deg);transition:transform .3s;max-width:340px}
+  .host-photo img{width:100%;display:block;border-radius:2px}
+  .host-photo::after{content:"查看更多 →";position:absolute;inset:12px 12px 30px;display:flex;align-items:center;justify-content:center;background:rgba(23,17,15,.55);color:#fff;font-weight:700;font-size:1.1rem;border-radius:2px;opacity:0;transition:opacity .3s}
+  .host-photo:hover{transform:rotate(0) translateY(-5px)}
+  .host-photo:hover::after{opacity:1}
+  .host-fb{display:inline-flex;align-items:center;gap:11px;color:var(--pink-deep);font-weight:700;font-size:1.04rem;transition:color .2s}
+  .host-fb .fbi{flex:none;width:30px;height:30px;border-radius:50%;background:var(--pink);color:#fff;display:flex;align-items:center;justify-content:center;transition:background .2s}
+  .host-fb .fbi svg{width:17px;height:17px}
+  .host-fb .arw{transition:transform .25s}
+  .host-fb:hover{color:var(--pink)}
+  .host-fb:hover .fbi{background:var(--pink-deep)}
+  .host-fb:hover .arw{transform:translateX(4px)}
+  @media(max-width:820px){.host-grid{grid-template-columns:1fr;gap:40px}.host-photo{transform:rotate(-1.5deg)}}
+  @media(max-width:560px){.chips{flex-wrap:wrap}}
+
+  /* testimonials marquee */
+  .marquee{margin-top:8px;overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+  .mrow{display:flex;gap:22px;width:max-content;animation:scrollL 46s linear infinite}
+  .mrow.rev{animation:scrollR 54s linear infinite;margin-top:22px}
+  .marquee:hover .mrow{animation-play-state:paused}
+  @keyframes scrollL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @keyframes scrollR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+  .mcard{flex:0 0 340px;background:var(--white);color:var(--ink);border-radius:16px;padding:26px 28px;box-shadow:0 14px 34px rgba(23,17,15,.16);display:flex;flex-direction:column}
+  .mcard .mk{font-family:'Huninn',"Noto Serif TC";font-size:2.4rem;color:var(--pink-soft);line-height:.5;height:.5em}
+  .mcard p{font-size:1rem;line-height:1.95;color:#3a2f2a;margin-top:10px}
+  @media(max-width:560px){.mcard{flex-basis:280px}}
+
+  /* 2026 info — 乾淨線性排版 */
+  .info-theme{text-align:center;font-family:'Huninn',"Noto Serif TC";font-weight:900;color:var(--gold);font-size:1.5rem;letter-spacing:.06em;margin:-2px 0 46px}
+  .info-when{display:flex;justify-content:center;gap:70px;flex-wrap:wrap;text-align:center;margin-bottom:60px}
+  .iw-k{font-family:'Huninn',"Noto Sans TC";font-weight:700;font-size:.78rem;letter-spacing:.32em;color:var(--pink-soft);margin-bottom:12px}
+  .iw-date{font-family:'Huninn',"Noto Serif TC";font-weight:900;color:var(--cream);font-size:clamp(2.3rem,5.2vw,3.1rem);line-height:1;letter-spacing:.01em;white-space:nowrap}
+  .iw-sub{color:var(--cream-dim);margin-top:8px;font-size:.95rem}
+  .iw-venue{font-family:'Huninn',"Noto Serif TC";font-weight:700;color:var(--cream);font-size:clamp(1.3rem,2.5vw,1.55rem);line-height:1.55}
+  .info-goals{max-width:860px;margin:0 auto 56px}
+  .ig-title{text-align:center;font-family:'Huninn',"Noto Serif TC";font-weight:900;color:var(--gold);font-size:1.3rem;margin-bottom:26px}
+  .ig-list{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .ig{text-align:center;padding:0 6px}
+  .ig b{display:block;font-family:'Huninn',"Noto Serif TC";font-weight:900;color:var(--gold);font-size:1.4rem;margin-bottom:8px}
+  .ig p{color:var(--cream-dim);font-size:.98rem;line-height:1.85;text-wrap:pretty}
+  .closing-quote{text-align:center;max-width:34em;margin:0 auto;font-family:'Huninn',"Noto Serif TC";font-size:1.24rem;line-height:2.1;color:var(--white);text-wrap:balance}
+  .closing-quote cite{display:block;margin-top:12px;font-weight:700;color:var(--gold);font-style:normal;font-size:1.05rem}
+  /* 支持我們 — 流動漸層色塊 */
+  .support{position:relative;overflow:hidden;max-width:620px;margin:60px auto 0;text-align:center;border-radius:26px;padding:46px 40px;
+    background:linear-gradient(120deg,rgba(234,185,74,.22),rgba(217,75,142,.16),rgba(234,185,74,.22));background-size:220% 220%;animation:spGrad 9s ease-in-out infinite}
+  @keyframes spGrad{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+  .sp-title{position:relative;z-index:1;font-family:'Huninn',"Noto Serif TC";font-weight:900;color:var(--gold);font-size:1.7rem;margin-bottom:10px}
+  .sp-desc{position:relative;z-index:1;color:var(--cream);margin:0 auto 28px;max-width:26em;font-size:1.02rem;line-height:1.85;text-wrap:pretty}
+  .sp-links{position:relative;z-index:1;display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+  .sp-btn{position:relative;overflow:hidden;display:inline-flex;flex-direction:column;align-items:center;gap:2px;font-weight:700;padding:14px 30px;border-radius:16px;transition:transform .2s,background .2s;line-height:1.3}
+  .sp-btn b,.sp-btn small{position:relative;z-index:1}
+  .sp-btn b{font-size:1.08rem}
+  .sp-btn small{font-weight:500;font-size:.78rem;opacity:.8}
+  .sp-btn.primary{background:var(--gold);color:var(--ink);box-shadow:0 8px 22px rgba(234,185,74,.28);animation:spPulse 2.6s ease-in-out infinite}
+  .sp-btn.primary::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.65),transparent);transform:skewX(-20deg);animation:spShine 3.6s ease-in-out infinite;pointer-events:none;z-index:0}
+  .sp-btn.primary:hover{background:#fff;transform:translateY(-3px)}
+  .sp-btn.ghost{background:rgba(245,237,223,.12);color:var(--cream)}
+  .sp-btn.ghost:hover{background:rgba(245,237,223,.22);transform:translateY(-3px)}
+  @keyframes spPulse{0%,100%{box-shadow:0 8px 22px rgba(234,185,74,.28)}50%{box-shadow:0 10px 32px rgba(234,185,74,.6)}}
+  @keyframes spShine{0%{left:-70%}38%{left:130%}100%{left:130%}}
+  @media(prefers-reduced-motion:reduce){.support,.sp-btn.primary,.sp-btn.primary::after{animation:none}}
+  @media(max-width:700px){.ig-list{grid-template-columns:1fr;gap:16px}.info-when{gap:40px}.sp-links{flex-direction:column}.sp-btn{width:100%}}
+
+  /* footer */
+  footer{background:#0f0b0a;color:var(--cream-dim);padding:42px 0 28px;text-align:center}
+  footer .flogo{font-family:'Huninn',"Noto Serif TC";font-weight:900;font-size:1.2rem;color:var(--cream);letter-spacing:1.5px}
+  footer .fen{color:var(--gold);font-size:.9rem;margin:4px 0 14px;font-weight:500}
+  footer p{font-size:.82rem;opacity:.72;max-width:38em;margin:0 auto 6px;line-height:1.8}
+  footer .org{font-size:.76rem;opacity:.55;margin-top:12px}
+  .to-top{position:fixed;right:22px;bottom:22px;z-index:50;width:50px;height:50px;border-radius:50%;background:var(--gold);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:1.4rem;box-shadow:0 6px 18px rgba(0,0,0,.4);opacity:0;pointer-events:none;transition:opacity .3s;cursor:pointer;font-weight:900}
+  .to-top.show{opacity:1;pointer-events:auto}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* waves & doodles */
+  .wave{position:absolute;left:0;width:100%;height:clamp(44px,7vw,90px);pointer-events:none;z-index:2}
+  .wave svg{width:100%;height:100%;display:block}
+  .wave.btm{bottom:-1px}
+  .wave.top{top:-1px}
+  .dafu{position:absolute;right:3%;top:56px;width:min(200px,28vw);transform:rotate(3deg);pointer-events:none;filter:drop-shadow(2px 3px 0 rgba(23,17,15,.2));z-index:2}
+  @media(max-width:820px){.dafu{top:22px;width:min(140px,34vw)}}
+  .star-deco{position:absolute;pointer-events:none;z-index:1}
+  .star-deco.s-pillars{width:130px;right:2%;top:64px;transform:rotate(14deg);opacity:.8}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="burger" id="burger"><span></span><span></span><span></span></div>
+  <nav class="links" id="links">
+    <a href="#origin">緣起</a>
+    <a href="#pillars">貧中目標</a>
+    <a href="#axis">展覽主軸</a>
+    <a href="#recap">2025 回顧</a>
+    <a href="#host">關於街角家</a>
+    <a href="#info" class="cta">2026展覽資訊</a>
+    <a href="https://neti.cc/LYZnWoW" target="_blank" rel="noopener noreferrer" class="cta-pink">捐款支持</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <!-- 星球漸層定義 -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+    <radialGradient id="planet" cx="40%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#2a2019"/>
+      <stop offset="70%" stop-color="#17110f"/>
+      <stop offset="100%" stop-color="#0c0908"/>
+    </radialGradient>
+  </defs></svg>
+
+  <img class="scrib" src="assets/star.png" alt="" style="width:64px;top:14%;left:6%;transform:rotate(-14deg)">
+  <svg class="scrib hide-m" style="bottom:16%;left:8%;width:56px" viewBox="0 0 64 40"><path d="M4,22 q10,-16 20,0 q10,16 20,0 q8,-13 16,-2" stroke="#f5eddf" stroke-width="4" fill="none" stroke-linecap="round" opacity=".75"/></svg>
+  <div class="wave btm" style="color:var(--paper)"><svg viewBox="0 0 1200 100" preserveAspectRatio="none"><path fill="currentColor" d="M0,64 C150,98 330,12 600,46 C860,80 1050,18 1200,52 L1200,102 L0,102 Z"/></svg></div>
+
+  <div class="hero-grid wrap">
+    <div class="hero-inner">
+      <span class="htag">2026 貧窮人的台中</span>
+      <h1><img src="assets/title-white.png" alt="聆聽失序之聲"></h1>
+      <p class="hero-lead">「肉眼所見的真實，在表象的秩序之下，有伏流，甚至有狂風暴雨。我們都害怕混亂，可混亂裡，有誠實的聲音。」</p>
+      <div class="date-star">
+        <img class="dt" src="assets/date.png" alt="11月15日至11月29日，週日">
+        <div class="p">文化部文化資產園區<br>衙道堂 B05</div>
+      </div>
+      <div class="hero-org"><span class="k">主辦</span>台灣街角家關懷協會</div>
+    </div>
+    <div class="hero-art">
+      <svg class="blob" viewBox="0 0 600 600" aria-hidden="true">
+        <path fill="url(#planet)" d="M300,40 C420,30 520,120 540,250 C560,370 500,500 360,540 C240,575 90,540 50,410 C10,290 60,150 160,90 C210,60 250,45 300,40 Z"/>
+        <g stroke="#3a2c25" stroke-width="1.1" fill="none" opacity=".8">
+          <path d="M120,180 C220,140 340,160 430,230"/>
+          <path d="M110,260 C230,230 360,250 460,320"/>
+          <path d="M130,340 C240,320 370,340 450,400"/>
+          <path d="M160,420 C260,410 360,430 430,470"/>
+        </g>
+        <g fill="#eab94a">
+          <path d="M430,150 l14,30 l32,4 l-24,22 l7,32 l-29,-16 l-29,16 l7,-32 l-24,-22 l32,-4 Z" opacity=".95"/>
+          <circle cx="360" cy="300" r="7"/>
+          <path d="M250,470 l8,17 l19,2 l-14,13 l4,19 l-17,-9 l-17,9 l4,-19 l-14,-13 l19,-2 Z" opacity=".9"/>
+        </g>
+        <g fill="#d94b8e" opacity=".9">
+          <circle cx="300" cy="360" r="14"/>
+          <path d="M470,360 q20,-6 34,8 q-8,20 -30,16 q-14,-10 -4,-24 Z"/>
+        </g>
+        <g stroke="#f5eddf" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".9">
+          <path d="M180,110 l-16,26 l20,10 l-18,26"/>
+          <path d="M120,470 l16,22 l-20,10 l16,22"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ORIGIN -->
+<section class="band paper reveal" id="origin">
+  <div class="wave btm" style="color:var(--ink)"><svg viewBox="0 0 1200 100" preserveAspectRatio="none"><path fill="currentColor" d="M0,64 C150,98 330,12 600,46 C860,80 1050,18 1200,52 L1200,102 L0,102 Z"/></svg></div>
+  <div class="wrap">
+    <h2 class="h-sec">貧中緣起</h2>
+    <blockquote class="epigraph">
+      <p>台北今天的光彩奪目，其實是百多年來，由南來北往的逐夢人——一無所有的人、底層勞工、移民、原住民與青年，付出心血、貢獻努力打造出來的結果。從某種角度來說，今天繁華的台北，不單是成功的人、有錢人的台北；也應該是挫折的人、貧窮人的台北。</p>
+      <cite>—— 孫大川〈貧窮人的台北發起書〉</cite>
+    </blockquote>
+    <p class="origin-body">承襲這樣的精神與行動方法，於 2024 年，由關注無家者議題的<span class="accent">街角家</span>主持，與台中多個議題組織共同發起「貧窮人的台中」。面向包含但不限於：女性無家者、移工、精神疾患、地方與社宅、永續等等，以「看見」、「聆聽」、「體會」、「團結」為行動核心，並以貧窮經驗者為主體，紀錄、傾聽身處其中的生命故事，陪伴發聲，共同前行。</p>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section class="band ink reveal" id="pillars">
+  <img class="star-deco s-pillars" src="assets/star.png" alt="">
+  <div class="wrap">
+    <h2 class="h-sec">貧中目標</h2>
+    <div class="pillars" style="margin-top:36px">
+      <div class="pillar">
+        <div class="num">01</div>
+        <h3>正視貧窮困境</h3>
+        <p>台灣大眾對貧窮的認識，普遍落在第三世界國家的「絕對貧窮」；然而貧窮除了經濟困境，更包含社會關係、制度、污名等面向。唯有更完整認識貧窮，社會才有機會共同前進。</p>
+      </div>
+      <div class="pillar">
+        <div class="num">02</div>
+        <h3>經驗者發聲</h3>
+        <p>理解貧窮的途徑，除了數據與研究外，更需要聆聽親身經驗者的聲音。陪伴整理經驗者的生命故事，以創作、講座等形式向社會呈現多元貧窮樣貌。</p>
+      </div>
+      <div class="pillar">
+        <div class="num">03</div>
+        <h3>搭建支持網路</h3>
+        <p>除了社工、社福組織，我們也積極創造多元群體的認識與交流。過去曾有藝術家、老師、劇場工作者、媒體工作者參與貧中，而後在各自領域發揮影響力，拓展更多涵容、友善的空間。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AXIS -->
+<section class="band dark reveal" id="axis">
+  <div class="wave btm" style="color:var(--paper)"><svg viewBox="0 0 1200 100" preserveAspectRatio="none"><path fill="currentColor" d="M0,64 C150,98 330,12 600,46 C860,80 1050,18 1200,52 L1200,102 L0,102 Z"/></svg></div>
+  <div class="wrap">
+    <h2 class="h-sec">展覽主軸</h2>
+    <div class="axis-head">
+      <p class="big-q">失序，是人格的敗壞，還是人心痛苦的外顯？</p>
+      <p class="lead-p">貧窮者的污名，經常源自其外顯的「失序行為」，例如：酒癮、懶惰、骯髒、犯罪、精神疾病、暴力等等。這些失序行為，經常被歸因於貧窮者人格或道德的缺陷，對窮人產生諸多排斥、歧視、社會排除。然而，在失序的背後，是否有我們不理解的成因？是否能有正向回應的方式？</p>
+    </div>
+    <div class="axis-grid">
+      <div class="axis-card">
+        <div class="n">01</div>
+        <h3>理解失序成因</h3>
+        <span class="qt">「失序，其實是痛苦的信號。」</span>
+        <p>失序的行動往往帶著傷害性，承受痛苦的人或社會，難以不用厭惡的態度詮釋失序。然而，失序的成因正來自痛苦，緣自其「需求的匱乏」、「身心的痛苦」、「受困的處境」，我們試圖透過失序者的經驗，理解失序背後的真正邏輯。</p>
+      </div>
+      <div class="axis-card">
+        <div class="n">02</div>
+        <h3>辨認失序的企圖</h3>
+        <span class="qt">「人是藏不住自己的痛苦的，痛苦擁有自己的意識，會用各種方式表達自己。」</span>
+        <p>失序行動，不論朝向衝動毀滅，還是生存釋放，看似消極病態，事實上都是主體為了滿足自己的需要而付諸的行動。</p>
+      </div>
+      <div class="axis-card">
+        <div class="n">03</div>
+        <h3>在失序中連結</h3>
+        <span class="qt">「失序並非是窮人的專利。」</span>
+        <p>任何階級、角色、社會關係中，都可能存在失序，可能就是我們身邊的人，可能就是你，就是我。意識到原來我們也擁有失序、也可能痛苦、匱乏、受困，在這個層次中，我們開始與窮人產生了連結。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUFFERING (flip cards) -->
+<section class="band paper reveal" id="suffer">
+  <div class="wave btm" style="color:var(--ink)"><svg viewBox="0 0 1200 100" preserveAspectRatio="none"><path fill="currentColor" d="M0,64 C150,98 330,12 600,46 C860,80 1050,18 1200,52 L1200,102 L0,102 Z"/></svg></div>
+  <div class="wrap">
+    <h2 class="h-sec">貧窮，如何使人受苦？</h2>
+    <p class="sec-lead">貧窮不只是「沒有錢」。它像一條環環相扣的鎖鏈，讓一個人越來越難走出來。</p>
+    <p class="flip-hint">— 翻牌，看每個階段發生了什麼 —</p>
+    <div class="flips">
+      <div class="flip">
+        <div class="flip-inner">
+          <div class="flip-face flip-front"><div class="st">01</div><h4>身心承受痛苦</h4><span class="flip-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.6-6.3"/><path d="M21 3v5h-5"/></svg>翻牌</span></div>
+          <div class="flip-face flip-back"><p>匱乏、不穩定的收入、被剝奪的處境，帶來身心與人際關係上的傷害。</p></div>
+        </div>
+      </div>
+      <div class="flip-conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h14"/><path d="M13 6l6 6-6 6"/></svg></div>
+      <div class="flip">
+        <div class="flip-inner">
+          <div class="flip-face flip-front"><div class="st">02</div><h4>轉為失序</h4><span class="flip-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.6-6.3"/><path d="M21 3v5h-5"/></svg>翻牌</span></div>
+          <div class="flip-face flip-back"><p>長期累積的痛苦，容易外顯為外界眼中的「失序行為」或疾病。</p></div>
+        </div>
+      </div>
+      <div class="flip-conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h14"/><path d="M13 6l6 6-6 6"/></svg></div>
+      <div class="flip">
+        <div class="flip-inner">
+          <div class="flip-face flip-front"><div class="st">03</div><h4>招致污名與排除</h4><span class="flip-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.6-6.3"/><path d="M21 3v5h-5"/></svg>翻牌</span></div>
+          <div class="flip-face flip-back"><p>失序招來誤解、歧視與社會排除，讓人更被推向邊緣。</p></div>
+        </div>
+      </div>
+      <div class="flip-conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h14"/><path d="M13 6l6 6-6 6"/></svg></div>
+      <div class="flip">
+        <div class="flip-inner">
+          <div class="flip-face flip-front"><div class="st">04</div><h4>更難翻身</h4><span class="flip-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.6-6.3"/><path d="M21 3v5h-5"/></svg>翻牌</span></div>
+          <div class="flip-face flip-back"><p>被排除的處境，阻礙了康復與重新回到社會的路，痛苦於是不斷循環。</p></div>
+        </div>
+      </div>
+    </div>
+    <p class="flow-note">看懂這條鎖鏈，我們就能明白：許多「失序」，其實是痛苦的外顯，而不是人格的缺陷。<span class="accent">要鬆開這條鎖鏈，需要的不是責備，而是理解與陪伴。</span></p>
+  </div>
+</section>
+
+<!-- RECAP 2025 -->
+<section class="band ink reveal" id="recap">
+  <div class="wave btm" style="color:var(--pink)"><svg viewBox="0 0 1200 100" preserveAspectRatio="none"><path fill="currentColor" d="M0,64 C150,98 330,12 600,46 C860,80 1050,18 1200,52 L1200,102 L0,102 Z"/></svg></div>
+  <div class="wrap">
+    <h2 class="h-sec">回顧 2025・貧窮人的台中</h2>
+    <p class="sec-lead">上一屆「貧窮人的台中」串連台中在地的議題組織，用一檔展覽與一系列線下行動，邀請大眾走進貧窮經驗者的世界。面向涵蓋女性無家者、移工、精神疾患、地方與社宅、永續等多元議題——我們相信，理解貧窮，需要不只一種入口。</p>
+    <div class="recap-acts">
+      <div class="rcard"><div class="ph"><img src="assets/photo-expo.jpg" alt="展覽現場的主題展板" loading="lazy"></div><div class="body"><h4>展覽</h4><p>多種貧窮型態的靜態展區，用文字、影像與互動細節，讓觀展者成為展覽的一部分。</p></div></div>
+      <div class="rcard"><div class="ph"><img src="assets/photo-clay.jpg" alt="共融創作作品" loading="lazy"></div><div class="body"><h4>共融創作</h4><p>與經驗者一起動手創作，把生命經驗轉化為看得見、摸得到的作品。</p></div></div>
+      <div class="rcard"><div class="ph"><img src="assets/photo-game.jpg" alt="親子在互動展牆前遊玩" loading="lazy"></div><div class="body"><h4>互動遊戲</h4><p>透過遊戲換位思考，體會貧窮處境中每一個艱難的選擇與無奈。</p></div></div>
+      <div class="rcard"><div class="ph"><img src="assets/photo-talk.jpg" alt="講座現場" loading="lazy"></div><div class="body"><h4>講座・真人圖書館</h4><p>邀請經驗者與各領域工作者現身說法，面對面地交流與提問。</p></div></div>
+      <div class="rcard"><div class="ph"><img src="assets/photo-walk.jpg" alt="導覽走讀布幔" loading="lazy"></div><div class="body"><h4>導覽走讀</h4><p>走進台中街區，閱讀在這座城市裡真實發生的貧窮故事。</p></div></div>
+    </div>
+    <div class="stats" id="stats">
+      <div class="stat"><b class="count" data-target="10">0</b><span>個議題組織</span></div>
+      <div class="stat"><b class="count" data-target="14">0</b><span>場線下活動</span></div>
+      <div class="stat"><b class="count" data-target="60" data-suffix="+">0</b><span>位志工</span></div>
+      <div class="stat"><b class="count" data-target="3500">0</b><span>位觀展者</span></div>
+      <div class="stat"><b>多元</b><span>貧窮型態展覽</span></div>
+    </div>
+    <p class="recap-close">一場展覽，成為許多人重新認識貧窮、也重新認識彼此的起點。</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS marquee -->
+<section class="band pink reveal" id="voices">
+  <img class="dafu" src="assets/dafu.png" alt="戴著耳機聆聽的塗鴉角色「大福」">
+  <div class="wave btm" style="color:var(--paper)"><svg viewBox="0 0 1200 100" preserveAspectRatio="none"><path fill="currentColor" d="M0,64 C150,98 330,12 600,46 C860,80 1050,18 1200,52 L1200,102 L0,102 Z"/></svg></div>
+  <div class="wrap">
+    <h2 class="h-sec">參與者回饋</h2>
+  </div>
+  <div class="marquee">
+    <div class="mrow" id="row1">
+      <div class="mcard"><div class="mk">“</div><p>謝謝你們舉辦這個展覽！讓我認識了一些我曾幾何時可能遇過的人，過去是需要被看見的，正因為看見，才能產生出一些變化。</p></div>
+      <div class="mcard"><div class="mk">“</div><p>以往雖然知道有貧困者的存在，但也僅此而已，這次的展覽讓我們看見了貧困者所面臨的難處。</p></div>
+      <div class="mcard"><div class="mk">“</div><p>展區設計得很用心，很多小細節和互動，讓觀展者不像是局外人，而能成為展覽的一部分。</p></div>
+    </div>
+    <div class="mrow rev" id="row2">
+      <div class="mcard"><div class="mk">“</div><p>用深入淺出的文字介紹，讓觀展人連結自身經驗，思索自己還能為世界做些什麼，是很貼近人心的做法。</p></div>
+      <div class="mcard"><div class="mk">“</div><p>參加走讀，很謝謝你們辦理這麼有特色的主題，卻與在台中生活的人們息息相關。講座的現身說法，從不同角色分享真誠的心聲，都非常珍貴。</p></div>
+      <div class="mcard"><div class="mk">“</div><p>喜歡書寫性別困境的小小展間，身為一位女性，可以從裡面深深感受到那份無力感與剝奪感。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOST ORG -->
+<section class="band paper reveal" id="host">
+  <div class="wave btm" style="color:#17110f"><svg viewBox="0 0 1200 100" preserveAspectRatio="none"><path fill="currentColor" d="M0,64 C150,98 330,12 600,46 C860,80 1050,18 1200,52 L1200,102 L0,102 Z"/></svg></div>
+  <div class="wrap">
+    <img class="host-toplogo" src="assets/logo-gold.png" alt="街角家 Home Street Home 標誌">
+    <h2 class="h-sec">關於主辦單位・街角家</h2>
+    <div class="host-grid">
+      <div>
+        <div class="host-sub">台灣街角家關懷協會（台中石頭湯）</div>
+        <p>街角家是一個在台中服務無家者的社福組織，關注城市裡不同型態的貧窮。一方面提供貧窮者直接服務——生活支持、社區培力、義診與藝術療癒；另一方面透過線下的倡議行動，幫助大眾理解貧窮的多元面向，減少對貧窮者的恐懼、污名與社會排除，一起搭建友善而共融的社會。</p>
+        <p>2024 年起，街角家把「窮學盟」每年舉辦的大型倡議行動〈貧窮人的台北〉帶到台中，發起「貧窮人的台中」，決心深耕這座城市裡的貧窮議題。</p>
+        <div class="chips">
+          <span class="chip">直接服務</span>
+          <span class="chip">社區培力</span>
+          <span class="chip">貧窮倡議</span>
+          <span class="chip">共融社會</span>
+        </div>
+      </div>
+      <div class="host-media">
+        <a class="host-photo" href="https://www.facebook.com/HomeStreetHome.tc/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/host-team.jpg" alt="街角家夥伴合影">
+        </a>
+        <a class="host-fb" href="https://www.facebook.com/HomeStreetHome.tc/" target="_blank" rel="noopener noreferrer"><span class="fbi"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.6V3.9c-.3 0-1.3-.1-2.4-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.6v3h2.4v8z"/></svg></span>追蹤街角家 Facebook<span class="arw">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2026 INFO -->
+<section class="band dark reveal" id="info">
+  <div class="wrap">
+    <h2 class="h-sec">2026 貧窮人的台中</h2>
+    <p class="info-theme">聆聽失序之聲</p>
+
+    <div class="info-when">
+      <div class="iw">
+        <div class="iw-k">展期</div>
+        <div class="iw-date">11.15 – 11.29</div>
+        <div class="iw-sub">週日至週日</div>
+      </div>
+      <div class="iw">
+        <div class="iw-k">地點</div>
+        <div class="iw-venue">文化部文化資產園區<br>衙道堂 B05 多功能空間</div>
+      </div>
+    </div>
+
+    <div class="info-goals">
+      <div class="ig-title">策展目標</div>
+      <div class="ig-list">
+        <div class="ig"><b>探索</b><p>透過失序者的生命經驗，看見失序的全貌。</p></div>
+        <div class="ig"><b>連結</b><p>看見並認識失序，在失序中彼此連結。</p></div>
+        <div class="ig"><b>結盟</b><p>相認、結盟，才有力量作出抵抗。</p></div>
+      </div>
+    </div>
+
+    <div class="closing-quote">
+      「沒有人能夠獨自承受世間的苦痛，我們都需要同伴，才能勇敢的負傷前行。」
+      <cite>——《希望的秘密》</cite>
+    </div>
+
+    <div class="support">
+      <div class="sp-title">支持我們</div>
+      <p class="sp-desc">「貧窮人的台中」是非營利的倡議行動，仰賴大眾的捐款持續舉辦。邀請你一起支持。</p>
+      <div class="sp-links">
+        <a class="sp-btn primary" href="https://neti.cc/LYZnWoW" target="_blank" rel="noopener noreferrer"><b>立即捐款</b><small>支持行動持續發生</small></a>
+        <a class="sp-btn ghost" href="https://reurl.cc/LQry54" target="_blank" rel="noopener noreferrer"><b>捐款徵信</b><small>查看善款用途與流向</small></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flogo">貧窮人的台中</div>
+    <div class="fen">聆聽失序之聲 ・ 2026</div>
+    <p>一場大型貧窮倡議行動由街角家與台中多個議題組織共同發起，以看見、聆聽、體會、團結為核心，陪伴貧窮經驗者發聲，共同前行。</p>
+    <div class="org">主辦：台灣街角家關懷協會（台中石頭湯）｜協力：台中多個議題組織｜© 2026 貧窮人的台中</div>
+  </div>
+</footer>
+
+<div class="to-top" id="toTop">↑</div>
+
+<script>
+  const nav=document.getElementById('nav');
+  const burger=document.getElementById('burger');
+  const links=document.getElementById('links');
+  const toTop=document.getElementById('toTop');
+  window.addEventListener('scroll',()=>{
+    const y=window.scrollY;
+    nav.classList.toggle('solid',y>40);
+    toTop.classList.toggle('show',y>500);
+  });
+  burger.addEventListener('click',()=>links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+  toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // 翻牌（手機點按也能翻）
+  document.querySelectorAll('.flip').forEach(f=>f.addEventListener('click',()=>f.classList.toggle('flipped')));
+
+  // 跑馬燈：複製卡片以無縫循環
+  ['row1','row2'].forEach(id=>{const r=document.getElementById(id);r.innerHTML+=r.innerHTML;});
+
+  // 數字動態跑
+  function runCount(el){
+    const target=+el.dataset.target, suffix=el.dataset.suffix||'';
+    const dur=1600, t0=performance.now();
+    function step(now){
+      const p=Math.min((now-t0)/dur,1);
+      const eased=1-Math.pow(1-p,3);
+      el.textContent=Math.round(target*eased)+ (p>=1?suffix:'');
+      if(p<1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  const statObserver=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){e.target.querySelectorAll('.count').forEach(runCount);statObserver.unobserve(e.target);}
+  }),{threshold:.4});
+  const stats=document.getElementById('stats');
+  if(stats) statObserver.observe(stats);
+</script>
+</body>
+</html>

@@ -410,6 +410,13 @@
     .marquee{-webkit-mask-image:none;mask-image:none}
   }
 
+  /* ---------- 內文左右對齊 ---------- */
+  .panel p:not(.pq):not(.hl),.host p:not(.org):not(.tag),.what p,.cat-desc,.origin-cols p{text-align:justify;text-justify:inter-character}
+  @media(max-width:760px){
+    .story p,.voice .v-lead,.voice .v-body,.voice .v-end,.sec-head p:not(.lead-tag),.origin-end p,.support p,.expo-info dd small{text-align:justify;text-justify:inter-character;text-align-last:left}
+    .story p.bridge{text-align:left;text-align-last:left}
+  }
+
   @media(max-width:600px){br.d{display:none}.story{text-align:left}.story p.bridge::before{margin-left:0}}
   @media(prefers-reduced-motion:reduce){.ticker .tk{animation:none}.reveal{opacity:1;transform:none;transition:none}}
 </style>
@@ -514,13 +521,6 @@
       </dl>
       <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%87%E5%8C%96%E9%83%A8%E6%96%87%E5%8C%96%E8%B3%87%E7%94%A2%E5%9C%92%E5%8D%80%20%E8%A1%A1%E9%81%93%E5%A0%82" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>在 Google 地圖查看</a>
     </div>
-
-    <nav class="cat-nav" aria-label="活動分類">
-      <a href="#cat-1"><b>01</b>開幕式・閉幕式</a>
-      <a href="#cat-2"><b>02</b>系列專題講座</a>
-      <a href="#cat-3"><b>03</b>田野花絮對談</a>
-      <a href="#cat-4"><b>04</b>共融創作工作坊</a>
-    </nav>
 
     <!-- 01 -->
     <article class="cat" id="cat-1">

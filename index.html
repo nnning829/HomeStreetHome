@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>2026 貧窮人的台中｜聆聽失序之聲</title>
-<meta name="description" content="2026 貧窮人的台中，第二屆大型貧窮倡議行動，主題「聆聽失序之聲」。11.15 至 11.29 於文化部文化資產園區衙道堂 B05。">
+<meta name="description" content="2026 貧窮人的台中，第二屆大型貧窮倡議行動，主題「聆聽失序之聲」。11.15 至 11.29 於文化部文化資產園區衡道堂。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -48,6 +48,9 @@
   nav.links a:hover{opacity:1;color:var(--gold)}
   nav.links a.cta{opacity:1;background:var(--pink);color:#fff;padding:8px 20px;border-radius:40px;font-weight:700}
   nav.links a.cta:hover{background:var(--pink-deep);color:#fff}
+  nav.links a.cta-2{background:var(--gold);color:var(--ink)}
+  nav.links a.cta-2:hover{background:#fff;color:var(--ink)}
+  nav.links{gap:18px}
   .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:0}
   .burger span{width:24px;height:2px;background:var(--cream);border-radius:2px}
   @media(max-width:1040px){
@@ -270,7 +273,144 @@
   .to-top.show{opacity:1;pointer-events:auto}
   .to-top .icon{width:20px;height:20px;stroke-width:2.4}
 
-  @media(max-width:600px){br.d{display:none}}
+
+  /* ---------- 關於今年（敘事） ---------- */
+  .sec-head .lead-tag{font-family:var(--display);font-weight:700;font-size:clamp(1.1rem,2.2vw,1.3rem);color:var(--pink-deep);margin-top:16px}
+  .story{max-width:34em;margin:0 auto;text-align:center}
+  .story p{font-size:1.08rem;line-height:2.15;color:var(--text);margin-bottom:26px}
+  .story p.open{font-family:var(--display);font-weight:700;font-size:clamp(1.25rem,2.6vw,1.5rem);line-height:1.9;color:var(--ink)}
+  .story p.ask b{color:var(--ink);font-weight:700;background:linear-gradient(transparent 62%,rgba(234,185,74,.45) 62%)}
+  .story p.bridge{font-family:var(--display);font-weight:700;font-size:1.25rem;color:var(--pink-deep);margin:40px 0 0}
+  .story p.bridge::before{content:"";display:block;width:34px;height:3px;border-radius:2px;background:var(--gold);margin:0 auto 26px}
+
+  /* ---------- 失序之聲（深色轉折） ---------- */
+  .voice{padding:112px 0;color:var(--cream);text-align:center;overflow:hidden;
+    background:linear-gradient(180deg,rgba(15,11,10,.55),rgba(15,11,10,.9)),url("assets/photo-disorder.jpg") center 30%/cover,radial-gradient(ellipse at 60% 20%,#3a3950 0%,#1d1c2a 45%,#100c0b 100%)}
+  .voice .wrap{max-width:860px}
+  .voice .v-lead{font-size:1.05rem;color:var(--cream-dim);margin-bottom:26px}
+  .voice .v-big{font-family:var(--display);font-weight:700;font-size:clamp(1.45rem,3.4vw,2.15rem);line-height:1.75;color:#fff;margin:0 auto 46px;max-width:22em;text-wrap:balance}
+  .voice .v-big::before{content:"";display:block;width:34px;height:3px;border-radius:2px;background:var(--gold);margin:0 auto 28px}
+  .voice .v-body{font-size:1.05rem;line-height:2.1;color:var(--cream-dim);margin-bottom:22px}
+  .voice .v-body b{color:var(--gold);font-weight:700}
+  .groups5{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(234,185,74,.3);border:1px solid rgba(234,185,74,.3);border-radius:12px;overflow:hidden;margin:8px 0 34px}
+  .groups5 span{background:rgba(15,11,10,.75);padding:18px 6px;font-family:var(--display);font-weight:700;color:var(--gold);font-size:1.02rem}
+  .voice .v-end{font-weight:700;color:#fff;font-size:1.06rem;line-height:2.1;max-width:34em;margin:0 auto}
+  @media(max-width:720px){.groups5{grid-template-columns:repeat(2,1fr)}.groups5 span:last-child{grid-column:span 2}}
+
+  /* ---------- 展覽與活動 ---------- */
+  .expo{background:var(--white);border:1px solid var(--line-light);border-radius:18px;padding:34px 40px;display:grid;grid-template-columns:1fr;gap:22px;margin-bottom:28px}
+  .expo-title .tagline{display:inline-block;font-size:.85rem;font-weight:700;letter-spacing:.2em;color:#fff;background:var(--pink);padding:2px 12px;border-radius:40px;margin-bottom:10px}
+  .expo-title h3{font-size:clamp(1.25rem,2.4vw,1.5rem);color:var(--ink);line-height:1.5}
+  .expo-info{display:grid;grid-template-columns:1.1fr 1.4fr .7fr;gap:20px 36px;padding-top:22px;border-top:1px solid var(--line-light)}
+  .expo-info dt{font-size:.82rem;letter-spacing:.24em;color:var(--muted);margin-bottom:4px}
+  .expo-info dd{font-family:var(--display);font-weight:700;color:var(--ink);font-size:1.08rem;line-height:1.5}
+  .expo-info dd small{display:block;font-family:var(--body);font-weight:400;font-size:.86rem;color:var(--muted);margin-top:2px}
+  .map-link{justify-self:start;display:inline-flex;align-items:center;gap:6px;font-size:.92rem;font-weight:700;color:var(--pink-deep)}
+  .map-link:hover{text-decoration:underline;text-underline-offset:4px}
+  @media(max-width:900px){.expo{grid-template-columns:1fr;padding:28px 24px}.expo-info{grid-template-columns:1fr}}
+
+  .cat-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 28px}
+  .cat-nav a{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.65);border:1px solid var(--line-light);border-radius:12px;padding:14px 16px;font-weight:700;color:var(--ink);font-size:.98rem;transition:background .2s,border-color .2s}
+  .cat-nav a b{font-family:var(--display);color:var(--pink);font-size:.95rem}
+  .cat-nav a:hover{background:#fff;border-color:rgba(217,75,142,.4)}
+  @media(max-width:760px){.cat-nav{grid-template-columns:repeat(2,1fr)}}
+
+  .cat{background:var(--white);border:1px solid var(--line-light);border-radius:18px;padding:38px 40px 14px;margin-bottom:22px;scroll-margin-top:84px}
+  .cat-head{display:flex;justify-content:space-between;align-items:flex-start;gap:28px;padding-bottom:24px;border-bottom:2px solid var(--ink)}
+  .cat-n{font-family:var(--display);font-weight:700;color:var(--pink);font-size:1rem;letter-spacing:.1em}
+  .cat-head h3{font-size:clamp(1.4rem,2.8vw,1.75rem);color:var(--ink);line-height:1.4;margin:4px 0 6px}
+  .cat-tag{font-family:var(--display);font-weight:700;color:var(--pink-deep);font-size:1.05rem}
+  .cat-desc{font-size:.96rem;color:var(--muted);line-height:1.95;margin-top:8px;max-width:40em}
+  .reg{flex:none;display:inline-flex;align-items:center;gap:8px;background:var(--pink);color:#fff;font-weight:700;font-size:1rem;padding:12px 26px;border-radius:40px;transition:background .2s,transform .2s;white-space:nowrap}
+  .reg:hover{background:var(--pink-deep);transform:translateY(-2px)}
+  .reg .icon{font-size:1.05rem;stroke-width:2.2}
+  .sessions{list-style:none}
+  .ss{display:grid;grid-template-columns:96px 1fr;gap:24px;padding:24px 0;border-bottom:1px solid var(--line-light)}
+  .ss:last-child{border-bottom:0}
+  .when{text-align:center;background:var(--paper);border-radius:12px;padding:12px 6px;align-self:start}
+  .when b{display:block;font-family:var(--display);font-weight:700;font-size:1.45rem;color:var(--ink);line-height:1.2}
+  .when span{font-size:.84rem;color:var(--muted)}
+  .what h4{font-size:1.2rem;color:var(--ink);line-height:1.5}
+  .what .en{font-size:.88rem;color:var(--muted);font-style:italic;margin-top:2px}
+  .what .meta{display:flex;flex-wrap:wrap;gap:4px 20px;margin:8px 0 10px;font-size:.92rem;color:var(--text)}
+  .what .meta span{display:inline-flex;align-items:center;gap:6px}
+  .what .meta .icon{color:var(--pink)}
+  .what p{font-size:.97rem;line-height:1.95;color:var(--text);margin-bottom:6px}
+  .what p.who{color:var(--muted)}
+  .what p.who small{display:block;font-size:.82rem;opacity:.85}
+  @media(max-width:700px){
+    .cat{padding:28px 22px 8px}
+    .cat-head{flex-direction:column;gap:18px}
+    .reg{align-self:stretch;justify-content:center}
+    .ss{grid-template-columns:68px 1fr;gap:16px}
+    .when b{font-size:1.15rem}
+  }
+
+  /* ---------- 合作組織（分層） ---------- */
+  .tier{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:26px 0;border-top:1px solid var(--line-light)}
+  .tier:last-child{border-bottom:1px solid var(--line-light)}
+  .tier-k{font-family:var(--body);font-size:.95rem;font-weight:700;letter-spacing:.16em;color:var(--pink-deep);padding-top:12px}
+  .tier-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .org-card{background:var(--white);border:1px solid var(--line-light);border-radius:14px;padding:20px 20px 22px;min-height:96px}
+  .org-card .lg{height:56px;display:flex;align-items:center;margin-bottom:12px}
+  .org-card .lg img{max-height:56px;max-width:130px;width:auto;object-fit:contain}
+  .org-card h4{font-size:1.06rem;color:var(--ink);line-height:1.5}
+  .org-card span{display:block;font-size:.86rem;color:var(--muted);margin-top:2px}
+  @media(max-width:900px){.tier{grid-template-columns:1fr;gap:12px}.tier-k{padding-top:0}.tier-row{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.tier-row{grid-template-columns:1fr}}
+
+  /* ---------- 支持我們（動態） ---------- */
+  #support .support{position:relative;overflow:hidden;isolation:isolate;max-width:860px;padding:52px 56px;
+    background:linear-gradient(120deg,#fff4dc,#fde8f1,#fff1e6,#fde8f1);background-size:300% 300%;animation:spBg 12s ease-in-out infinite;
+    border:1px solid rgba(217,75,142,.2);box-shadow:none;transform:translateY(20px) scale(.97);opacity:0;transition:transform .9s cubic-bezier(.2,.8,.2,1),opacity .9s}
+  #support .support.on{transform:none;opacity:1}
+  @keyframes spBg{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+  .orb{position:absolute;border-radius:50%;filter:blur(36px);opacity:.55;z-index:-1;pointer-events:none}
+  .orb.o1{width:220px;height:220px;background:#f6a8cb;top:-80px;left:-60px;animation:drift1 14s ease-in-out infinite}
+  .orb.o2{width:260px;height:260px;background:#f7d48a;bottom:-120px;right:-60px;animation:drift2 16s ease-in-out infinite}
+  .orb.o3{width:160px;height:160px;background:#f9c4d9;top:30%;left:45%;animation:drift1 18s ease-in-out infinite reverse}
+  @keyframes drift1{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,40px)}}
+  @keyframes drift2{0%,100%{transform:translate(0,0)}50%{transform:translate(-70px,-30px)}}
+  .fstar{position:absolute;z-index:-1;pointer-events:none;opacity:.75}
+  .fstar.s1{width:34px;top:18px;right:38%;animation:floatS 7s ease-in-out infinite}
+  .fstar.s2{width:22px;bottom:22px;left:30%;animation:floatS 9s ease-in-out infinite 1.5s}
+  .fstar.s3{width:26px;top:24px;right:24px;animation:floatS 8s ease-in-out infinite .8s}
+  @keyframes floatS{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-14px) rotate(12deg)}}
+  .sp-text h3{display:flex;align-items:center;gap:10px}
+  .beat{width:28px;height:28px;fill:var(--pink);flex:none;animation:beat 1.6s ease-in-out infinite;transform-origin:center}
+  @keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.22)}30%{transform:scale(1)}45%{transform:scale(1.14)}60%{transform:scale(1)}}
+  #support .sp-btn{position:relative;overflow:hidden}
+  #support .sp-btn span,#support .sp-btn small{position:relative;z-index:1}
+  #support .sp-btn{box-shadow:none}
+  #support .sp-btn.primary::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:shine 3.2s ease-in-out infinite}
+  @keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(217,75,142,.45)}70%{box-shadow:0 0 0 16px rgba(217,75,142,0)}100%{box-shadow:0 0 0 0 rgba(217,75,142,0)}}
+  @keyframes shine{0%{left:-80%}45%,100%{left:130%}}
+  @media(max-width:760px){#support .support{padding:40px 24px}.sp-text h3{justify-content:center}}
+
+  /* ---------- 合作組織（跑馬燈） ---------- */
+  .marquee{overflow:hidden;padding:10px 0 6px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+  .mq-track{display:flex;gap:18px;width:max-content;list-style:none;animation:mq var(--mq-dur,40s) linear infinite}
+  .marquee:hover .mq-track{animation-play-state:paused}
+  @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .mq-card{display:flex;align-items:center;gap:16px;background:var(--white);border:1px solid var(--line-light);border-radius:16px;padding:20px 28px;min-width:240px;box-shadow:0 8px 22px rgba(23,17,15,.05);transition:transform .25s,box-shadow .25s}
+  .mq-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(217,75,142,.14)}
+  .mq-card .lg{width:64px;height:64px;flex:none;display:flex;align-items:center;justify-content:center}
+  .mq-card .mono{width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,var(--pink),#e98bb6);color:#fff;font-family:var(--display);font-weight:700;font-size:1.5rem;display:flex;align-items:center;justify-content:center}
+  .mq-card .lg img{max-width:100%;max-height:100%;object-fit:contain}
+  .mq-card .tier-tag{display:inline-block;font-size:.76rem;font-weight:700;letter-spacing:.12em;color:var(--pink-deep);background:rgba(217,75,142,.08);padding:1px 10px;border-radius:40px;margin-bottom:4px}
+  .mq-card h4{font-size:1.1rem;color:var(--ink);line-height:1.45;white-space:nowrap}
+  .mq-card .unit{display:block;font-size:.85rem;color:var(--muted);white-space:nowrap}
+  .mq-legend{text-align:center;font-size:.9rem;color:var(--muted);line-height:2;margin-top:26px}
+  .mq-legend b{color:var(--pink-deep);margin-right:6px}
+  .mq-legend span{margin:0 10px;opacity:.5}
+  @media(prefers-reduced-motion:reduce){
+    #support .support,.orb,.fstar,.beat,#support .sp-btn.primary,#support .sp-btn.primary::after{animation:none!important}
+    #support .support{transform:none;opacity:1}
+    .mq-track{animation:none;flex-wrap:wrap;width:auto;justify-content:center;padding:0 20px}
+    .marquee{-webkit-mask-image:none;mask-image:none}
+  }
+
+  @media(max-width:600px){br.d{display:none}.story{text-align:left}.story p.bridge::before{margin-left:0}}
   @media(prefers-reduced-motion:reduce){.ticker .tk{animation:none}.reveal{opacity:1;transform:none;transition:none}}
 </style>
 </head>
@@ -281,13 +421,14 @@
   <button class="burger" id="burger" aria-label="開啟選單"><span></span><span></span><span></span></button>
   <nav class="links" id="links">
     <a href="#about">關於今年</a>
-    <a href="#issue">議題介紹</a>
     <a href="#events">展覽與活動</a>
+    <a href="#issue">議題介紹</a>
     <a href="#partners">合作組織</a>
-    <a href="#recap">2024 回顧</a>
-    <a href="#origin">貧中緣起</a>
     <a href="#host">街角家</a>
-    <a href="https://neti.cc/LYZnWoW" target="_blank" rel="noopener noreferrer" class="cta">捐款支持</a>
+    <a href="#origin">貧中緣起</a>
+    <a href="#recap">2024 回顧</a>
+    <a href="#events" class="cta cta-2">活動報名</a>
+    <a href="#support" class="cta">捐款支持</a>
   </nav>
 </header>
 
@@ -305,7 +446,7 @@
       <p class="hero-lead">「我們都害怕混亂，喜歡安穩清晰，但混亂裡有誠實的聲音。」<cite>《受苦的倒影》</cite></p>
       <div class="date-star">
         <img class="dt" src="assets/date.png" alt="11月15日至11月29日">
-        <div class="p">文化部文化資產園區<br>衙道堂 B05</div>
+        <div class="p">文化部文化資產園區<br>衡道堂</div>
       </div>
       <div class="hero-org"><b>主辦</b>台灣街角家關懷協會</div>
     </div>
@@ -322,44 +463,229 @@
 </section>
 
 <div class="ticker" aria-hidden="true">
-  <div class="tk" id="ticker"><span>11.15 – 11.29</span><span class="dot"></span><span>文化部文化資產園區 衙道堂 B05</span><span class="dot"></span><span>聆聽失序之聲</span><span class="dot"></span><span>11.15 – 11.29</span><span class="dot"></span><span>文化部文化資產園區 衙道堂 B05</span><span class="dot"></span><span>聆聽失序之聲</span><span class="dot"></span></div>
+  <div class="tk" id="ticker"><span>11.15 – 11.29</span><span class="dot"></span><span>文化部文化資產園區衡道堂</span><span class="dot"></span><span>聆聽失序之聲</span><span class="dot"></span><span>11.15 – 11.29</span><span class="dot"></span><span>文化部文化資產園區衡道堂</span><span class="dot"></span><span>聆聽失序之聲</span><span class="dot"></span></div>
 </div>
 
-<!-- 開場提問 -->
-<section class="band paper reveal" id="intro">
-  <div class="wrap intro">
-    <div class="labels"><span>流落街頭</span><span>精神疾病</span><span>逆境家庭</span><span>貧窮女性</span><span>藥物成癮</span></div>
-    <p class="q">社會中經常受負面標籤纏繞的人們，<em>究竟經歷了什麼事？</em></p>
-    <p class="a">今年「貧窮人的台中」，讓我們把船划往水深處，划向最被恐懼污名的群體，談論最被排斥的議題，一起<b>「聆聽失序之聲」</b>。</p>
-  </div>
-</section>
-
-<!-- 關於今年 -->
+<!-- 關於今年＆問題意識 -->
 <section class="band white reveal" id="about">
-  <div class="wrap about">
-    <div>
-      <h2>關於今年的<br>貧窮人的台中</h2>
-      <p class="kick">那些被稱為失序的狀態，有時是痛苦留下的痕跡，是秩序重建前的動態過程，也是人努力活下去的策略。</p>
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><span class="pre">2026｜第二屆</span>《貧窮人的台中：聆聽失序之聲》</h2>
+      <p class="lead-tag">一場跨越汙名、團結抗貧的大型倡議行動</p>
     </div>
-    <div class="about-body">
-      <p>流浪、成癮、逃避、混亂、不努力，我們很容易從這些狀態片面地判斷一個人，卻少有機會再往前一步追問：<b>一個人為什麼如此生活著？他發生了什麼事？</b></p>
-      <p>每個看似「失序」的生命軌跡裡，都藏著一些深刻重要的聲音。本次展覽集結了四群經驗者的生命記憶，帶領我們走進那些不常被看見的角落。</p>
-      <div class="groups"><span>脆家兒少</span><span>藥癮經驗者</span><span>無家者</span><span>精神疾病經驗者</span></div>
-      <p>邀請你一起走入展間「聆聽失序之聲」，讓我們一同重新定義「失序」，也在這些交錯的故事中，感受彼此的連結，一起探索在脆弱中生長的力量。</p>
+    <div class="story">
+      <p class="open">流浪、成癮、逃避、混亂、不努力，<br>面對這些生活狀態，我們很容易先下判斷。</p>
+      <p>在一座追求發展與進步的城市裡，這些看起來「不符合期待」的生活，也容易被忽略、被排除。</p>
+      <p class="ask">但我們很少停下來問：<br><b>一個人為什麼會走到這裡？在他身上發生了什麼事？</b></p>
+      <p>當城市選擇看不見貧窮，貧窮經驗者也可能在孤立中，越來越厭惡自己、與社會疏離。</p>
+      <p>所以，我們希望把貧窮帶回公共討論，讓更多人看見那些被忽略的人，也讓理解與支持有機會發生。</p>
+      <p class="bridge">而「貧窮人的台中」，就是一座人與人之間能相遇的橋梁。</p>
     </div>
   </div>
 </section>
 
-<!-- 展覽問題意識 -->
-<section class="disorder reveal" id="disorder">
-  <div class="wrap dis-grid">
-    <div class="dis-main">
-    <span class="lbl">展覽問題意識</span>
-    <h2>失序，是人性道德的敗壞，<br class="d">還是人心痛苦的外顯？</h2>
-    <p>我們是街角家，在台中長期投入無家者服務，也致力於貧窮議題的倡議。在服務的現場我們經常發現，貧窮者的污名，經常源自其外顯的「失序行為」，例如：酒癮、懶惰、骯髒、犯罪、精神疾病、成癮、暴力等等。這些失序行為，經常被歸因於個人性格的缺陷敗壞，而對窮人產生恐懼、排斥與社會排除。</p>
-    <p>這次展覽希望從失序出發，叩問是否有其他理解的可能。<b>邀請大眾和我們一起，聆聽貧窮經驗者的生命故事，理解失序背後的痛苦、需求或受困，進一步尋找更適切的回應與支持方式，共同拓展對失序的認識。</b></p>
+<section class="voice reveal" id="voice">
+  <div class="wrap">
+    <p class="v-lead">在每個看似「失序」的生命軌跡裡，都藏著一些深刻重要的經驗。</p>
+    <p class="v-big">那些被稱為失序的狀態，有時既是痛苦留下的痕跡、是秩序重建前的動態過程，也是人努力活下去的策略。</p>
+    <p class="v-body">本次展覽集結<b>脆家兒少、藥癮經驗者、無家者、女性無家者與精神疾病經驗者</b>的生命，帶領我們「聆聽失序之聲」。</p>
+    <p class="v-body">我們想聽見的，不只是他們現在的樣子，還有那些樣子背後的故事：<br class="d">他們曾經歷什麼？正在面對什麼？又是如何努力生活下來的？</p>
+    <p class="v-end">邀請你走入展間「聆聽失序之聲」，讓我們一同重新定義「失序」，也在這些交錯的故事中，感受彼此的連結、一起探索在脆弱中生長的力量。</p>
+  </div>
+</section>
+
+<!-- 展覽與活動＆報名連結 -->
+<section class="band sand reveal" id="events">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><span class="pre">2026 貧窮人的台中</span>展覽與活動</h2>
+      <p>展覽免費入場，展期間全天開放。開幕式、講座、對談與工作坊需事先報名。</p>
     </div>
-    <blockquote class="dq">「灰濛年代，我們是目睹亦倖存的生者。一但開始深刻理解，並且追問：在自身與他人的苦難裡，我（們）要走向何處？灰濛自此有了意義，並且，有所指向。」<cite>《受苦的倒影》</cite></blockquote>
+
+    <div class="expo">
+      <div class="expo-title">
+        <span class="tagline">實體展覽</span>
+        <h3>《貧窮人的台中：聆聽失序之聲》</h3>
+      </div>
+      <dl class="expo-info">
+        <div><dt>展期</dt><dd>11/15（日）至 11/29（日）<small>每日 10:00 – 21:30</small></dd></div>
+        <div><dt>地點</dt><dd>文化部文化資產園區衡道堂<small>402 台中市南區復興路三段 362 號</small></dd></div>
+        <div><dt>費用</dt><dd>免費入場</dd></div>
+      </dl>
+      <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%87%E5%8C%96%E9%83%A8%E6%96%87%E5%8C%96%E8%B3%87%E7%94%A2%E5%9C%92%E5%8D%80%20%E8%A1%A1%E9%81%93%E5%A0%82" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>在 Google 地圖查看</a>
+    </div>
+
+    <nav class="cat-nav" aria-label="活動分類">
+      <a href="#cat-1"><b>01</b>開幕式・閉幕式</a>
+      <a href="#cat-2"><b>02</b>系列專題講座</a>
+      <a href="#cat-3"><b>03</b>田野花絮對談</a>
+      <a href="#cat-4"><b>04</b>共融創作工作坊</a>
+    </nav>
+
+    <!-- 01 -->
+    <article class="cat" id="cat-1">
+      <header class="cat-head">
+        <div>
+          <span class="cat-n">01</span>
+          <h3>開幕式・舞蹈劇場・閉幕式</h3>
+          <p class="cat-desc">歡迎你與我們一起熱鬧的揭開序幕，也與我們呼出一口氣，暫時的、寫下逗號……</p>
+        </div>
+        <a class="reg" href="https://neti.cc/AbOmMyk" target="_blank" rel="noopener noreferrer">立即報名<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      </header>
+      <ol class="sessions">
+        <li class="ss">
+          <div class="when"><b>11/15</b><span>週日</span></div>
+          <div class="what">
+            <h4>開幕式暨舞蹈劇場</h4>
+            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>10:00 – 12:30</span><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>文化部文化資產園區衡道堂</span></div>
+            <p>開幕式將邀請「貧窮人的台中」所有參展團隊，共同揭開《聆聽失序之聲》的序幕，探索流動的貧窮、失序狀態的聆聽經驗；開幕式尾聲也邀請到無垢舞蹈劇場的舞者進行演出。這場盛宴，讓我們一起來共襄盛舉！</p>
+            <p class="who">出席單位：平等街小站：禧年關懷協會｜台中市康復之友協會｜耕水小子：臺中市助扶關懷協會｜朝露農場：社團法人台灣露德協會｜街角家關懷協會<small>以上依單位名稱筆劃順序排列</small></p>
+          </div>
+        </li>
+        <li class="ss">
+          <div class="when"><b>11/29</b><span>週日</span></div>
+          <div class="what">
+            <h4>閉幕式：聆聽「聆聽之人」的聲音</h4>
+            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>19:00 – 21:30</span><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>文化部文化資產園區衡道堂</span></div>
+            <p>一場閉幕式，讓策展團隊能述說這一年來籌備的心血，我們練習聽，也練習說。</p>
+          </div>
+        </li>
+      </ol>
+    </article>
+
+    <!-- 02 -->
+    <article class="cat" id="cat-2">
+      <header class="cat-head">
+        <div>
+          <span class="cat-n">02</span>
+          <h3>系列專題講座</h3>
+          <p class="cat-tag">聆聽之外，我們再進一步深探</p>
+        </div>
+        <a class="reg" href="https://neti.cc/7zgwy1E" target="_blank" rel="noopener noreferrer">立即報名<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      </header>
+      <ol class="sessions">
+        <li class="ss">
+          <div class="when"><b>11/21</b><span>週六</span></div>
+          <div class="what">
+            <h4>《脆弱製造 X 后里自造》</h4>
+            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>10:00 – 12:00</span><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>文化部文化資產園區衡道堂</span></div>
+            <p class="who">講者：林秉賢｜東海大學社會工作學系教授、黃仁祈｜耕水小子：臺中市助扶關懷協會執行長</p>
+          </div>
+        </li>
+        <li class="ss">
+          <div class="when"><b>11/21</b><span>週六</span></div>
+          <div class="what">
+            <h4>《看見結構的傷，與受苦者同行》</h4>
+            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>14:00 – 16:30</span><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>文化部文化資產園區小禮堂</span></div>
+            <p class="who">講者：彭仁郁｜中研院民族所副研究員／《家的蜃樓》作者</p>
+          </div>
+        </li>
+        <li class="ss">
+          <div class="when"><b>11/27</b><span>週五</span></div>
+          <div class="what">
+            <h4>《朝露農場期末成果發表會暨座談會》</h4>
+            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>09:30 – 12:30</span><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>文化部文化資產園區小禮堂</span></div>
+            <p class="who">講者：徐森杰｜露德協會秘書長、伊魯秀｜露德協會主任、朝露男子代表</p>
+          </div>
+        </li>
+        <li class="ss">
+          <div class="when"><b>11/29</b><span>週日</span></div>
+          <div class="what">
+            <h4>《最終，我們所抵抗的，會是什麼呢？》</h4>
+            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>14:00 – 17:00</span><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>文化部文化資產園區衡道堂</span></div>
+            <p class="who">講者：魏明毅｜《受苦的倒影》、《靜寂工人》作者</p>
+          </div>
+        </li>
+      </ol>
+    </article>
+
+    <!-- 03 -->
+    <article class="cat" id="cat-3">
+      <header class="cat-head">
+        <div>
+          <span class="cat-n">03</span>
+          <h3>田野花絮對談</h3>
+          <p class="cat-tag">聆聽之中，聆聽者聽見了什麼</p>
+          <p class="cat-desc">地點皆在文化部文化資產園區衡道堂</p>
+        </div>
+        <a class="reg" href="https://neti.cc/lJjko12" target="_blank" rel="noopener noreferrer">立即報名<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      </header>
+      <ol class="sessions">
+        <li class="ss">
+          <div class="when"><b>11/15</b><span>週日</span></div>
+          <div class="what">
+            <h4>《孩子，你是怎麼長大的？》</h4>
+            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>14:00 – 16:00</span></div>
+            <p class="who">與談：盧貞築｜耕水小子資源開發組品牌經理、黃子綺｜耕水小子資源開發組設計師、曾雅筑、易冠霈、許芳羿、劉欣語｜貧中脆家兒少組田野及攝影夥伴</p>
+          </div>
+        </li>
+        <li class="ss">
+          <div class="when"><b>11/20</b><span>週五</span></div>
+          <div class="what">
+            <h4>《浪跡的交錯：關於意外、墜落與韌性生命》</h4>
+            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>19:00 – 21:00</span></div>
+            <p class="who">與談：陳郁茹、劉覲華、吳杰霖、許淨茹｜無家者組田野夥伴與街頭大哥們</p>
+          </div>
+        </li>
+        <li class="ss">
+          <div class="when"><b>11/22</b><span>週日</span></div>
+          <div class="what">
+            <h4>《症狀之外，尋找心靈語言的自我追問》</h4>
+            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>19:00 – 21:00</span></div>
+            <p class="who">與談：楊小豌、温易珊、賴泱丞、陳筠今｜貧中田野夥伴</p>
+          </div>
+        </li>
+        <li class="ss">
+          <div class="when"><b>11/23</b><span>週一</span></div>
+          <div class="what">
+            <h4>《那些婦女的故事：關於斷裂、破碎與愛》</h4>
+            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>19:00 – 21:00</span></div>
+            <p class="who">與談：顏均容、蔡旻儒｜女性無家者組田野夥伴；郭大姐｜街頭大姐</p>
+          </div>
+        </li>
+      </ol>
+    </article>
+
+    <!-- 04 -->
+    <article class="cat" id="cat-4">
+      <header class="cat-head">
+        <div>
+          <span class="cat-n">04</span>
+          <h3>藝術、戲劇共融創作工作坊</h3>
+          <p class="cat-tag">聽～聽見他人與自己</p>
+          <p class="cat-desc">語言是有限的。這次，讓我們透過藝術、戲劇創作，來感受議題與我們之間的關聯，更立體的把自己的感受放置進來，帶著自己的經驗，與比我們更大一點的社會相遇，與不同的經驗、感受產生連結。地點皆在文化部文化資產園區衡道堂。</p>
+        </div>
+        <a class="reg" href="https://neti.cc/nZ7yN5q" target="_blank" rel="noopener noreferrer">立即報名<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      </header>
+      <ol class="sessions">
+        <li class="ss">
+          <div class="when"><b>11/15</b><span>週日</span></div>
+          <div class="what">
+            <h4>《安定與未定之間》藝術共創工作坊</h4>
+            <p class="en">The Settled and Unsettled in Life</p>
+            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>18:30 – 21:00</span></div>
+            <p class="who">帶領者：林彥廷｜藝術治療師／平權共融倡議者</p>
+          </div>
+        </li>
+        <li class="ss">
+          <div class="when"><b>11/21</b><span>週六</span></div>
+          <div class="what">
+            <h4>《欸？這樣不太對勁⋯⋯？》戲劇工作坊</h4>
+            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>18:30 – 21:30</span></div>
+            <p class="who">帶領者：嘉敏（Carmen Lee）｜應用劇場工作者、參與式促導者</p>
+          </div>
+        </li>
+        <li class="ss">
+          <div class="when"><b>11/22</b><span>週日</span></div>
+          <div class="what">
+            <h4>《失序之外，共在之中》藝術共創工作坊</h4>
+            <p class="en">Beyond Disorder, Being Together</p>
+            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>14:30 – 17:00</span></div>
+            <p class="who">帶領者：林彥廷｜藝術治療師／平權共融倡議者</p>
+          </div>
+        </li>
+      </ol>
+    </article>
   </div>
 </section>
 
@@ -411,84 +737,81 @@
   </div>
 </section>
 
-<!-- 展覽與活動 -->
-<!-- 待補（郁茹，9/24）：各場次日期、時間、講師、活動介紹與報名連結。
-     填好後：把 .date.tbd 換成日期並移除 tbd；把 .btn 的 href 換成報名頁，移除 off，文字改為「立即報名」。 -->
-<section class="band sand reveal" id="events">
+<!-- 支持我們與捐款方案（之後會換成完整集資方案） -->
+<section class="band white reveal" id="support">
   <div class="wrap">
-    <div class="sec-head">
-      <h2><span class="pre">2026 貧窮人的台中</span>展覽與活動</h2>
-      <p>展期間歡迎自由參觀；講座、走讀等場次需事先報名，詳細時間與講師資訊陸續公布。</p>
-    </div>
-    <div class="events">
-      <article class="ev">
-        <div class="ph"><img src="assets/r24-expo.jpg" alt="展覽現場，觀眾在展板前閱讀" loading="lazy"></div>
-        <div class="bd">
-          <span class="date">11.15 – 11.29</span>
-          <h3>實體展覽：聆聽失序之聲</h3>
-          <p class="one">集結脆家兒少、藥癮經驗者、無家者與精神疾病經驗者的生命記憶，走進不常被看見的角落。</p>
-          <div class="meta">
-            <span><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>文化部文化資產園區 衙道堂 B05</span>
-          </div>
-        </div>
-      </article>
-      <article class="ev">
-        <div class="ph"><img src="assets/r24-talk.jpg" alt="講座現場，經驗者手持麥克風分享" loading="lazy"></div>
-        <div class="bd">
-          <span class="date tbd">場次即將公布</span>
-          <h3>講座・真人圖書館</h3>
-          <p class="one">邀請經驗者與議題工作者現身說法，分享生命故事，也與大眾交流提問。</p>
-          <div class="meta">
-            <span><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>時間待公布</span>
-            <span><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>地點待公布</span>
-          </div>
-          <a class="btn off" href="#" aria-disabled="true">報名即將開放</a>
-        </div>
-      </article>
-      <article class="ev">
-        <div class="ph"><img src="assets/r24-walk.jpg" alt="導覽員帶領參與者走讀街區" loading="lazy"></div>
-        <div class="bd">
-          <span class="date tbd">場次即將公布</span>
-          <h3>導覽走讀</h3>
-          <p class="one">跟著「看見台中城」的街友導覽員，走進台中街區，閱讀真實發生的貧窮故事。</p>
-          <div class="meta">
-            <span><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>時間待公布</span>
-            <span><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>集合地點待公布</span>
-          </div>
-          <a class="btn off" href="#" aria-disabled="true">報名即將開放</a>
-        </div>
-      </article>
-      <article class="ev">
-        <div class="ph"><img src="assets/r24-create.jpg" alt="經驗者與參與者一起動手創作" loading="lazy"></div>
-        <div class="bd">
-          <span class="date tbd">場次即將公布</span>
-          <h3>更多系列活動</h3>
-          <p class="one">創作、互動體驗與跨領域串聯活動，場次陸續公布，歡迎追蹤街角家粉專。</p>
-          <div class="meta">
-            <span><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>時間待公布</span>
-          </div>
-          <a class="btn off" href="#" aria-disabled="true">報名即將開放</a>
-        </div>
-      </article>
+    <p class="closing">「沒有人能夠獨自承受世間的苦痛，我們都需要同伴，才能勇敢的負傷前行。」<cite>《希望的秘密》</cite></p>
+    <div class="support" id="supportBox">
+      <span class="orb o1" aria-hidden="true"></span><span class="orb o2" aria-hidden="true"></span><span class="orb o3" aria-hidden="true"></span>
+      <img class="fstar s1" src="assets/star.png" alt="" aria-hidden="true"><img class="fstar s2" src="assets/star.png" alt="" aria-hidden="true"><img class="fstar s3" src="assets/star.png" alt="" aria-hidden="true">
+      <div class="sp-text">
+        <h3><svg class="beat" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2z"/></svg>支持我們</h3>
+        <p>「貧窮人的台中」是非營利的倡議行動，仰賴大眾的捐款持續舉辦。邀請你一起支持。</p>
+      </div>
+      <div class="sp-links">
+        <a class="sp-btn primary" href="https://neti.cc/LYZnWoW" target="_blank" rel="noopener noreferrer"><span>立即捐款</span><small>支持行動持續發生</small></a>
+        <a class="sp-btn ghost" href="https://reurl.cc/LQry54" target="_blank" rel="noopener noreferrer"><span>捐款徵信</span><small>查看善款用途與流向</small></a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 合作組織 -->
-<!-- 待補（婉瑄）：每個組織的議題名稱與一兩句內容介紹。
-     Logo：把檔案以 partner-mratc.png／partner-care.png／partner-banner.png／partner-lourdes.png 放進 assets 就會自動顯示 -->
-<section class="band white reveal" id="partners">
+<!-- 合作組織
+     Logo：把檔案以下列檔名放進 assets 就會自動取代文字圓標
+     partner-mratc.png（康復之友）／partner-jubilee.png（禧年關懷協會）／partner-care.png（耕水小子）／partner-lourdes.png（露德協會）／partner-tfd.png（臺灣民主基金會） -->
+<section class="band paper reveal" id="partners">
   <div class="wrap">
     <div class="sec-head">
       <h2>合作組織</h2>
       <p>沒有任何一個組織，可以單獨承接所有交織的苦難。今年，我們與這些夥伴一同策展。</p>
     </div>
-    <div class="partners">
-      <div class="pt"><div class="lg"><img src="assets/partner-mratc.png" alt="台中市康復之友協會標誌" onerror="this.parentNode.remove()"></div><h3>台中市康復之友協會</h3><span class="issue">精神復元與支持</span></div>
-      <div class="pt"><div class="lg"><img src="assets/partner-care.png" alt="耕水小子標誌" onerror="this.parentNode.remove()"></div><h3>耕水小子</h3><div class="unit">臺中市助扶關懷協會</div></div>
-      <div class="pt"><div class="lg"><img src="assets/partner-banner.png" alt="旌旗教會標誌" onerror="this.parentNode.remove()"></div><h3>平等街關懷小站</h3><div class="unit">旌旗教會</div></div>
-      <div class="pt"><div class="lg"><img src="assets/partner-lourdes.png" alt="露德協會朝露農場標誌" onerror="this.parentNode.remove()"></div><h3>朝露農場</h3><div class="unit">露德協會</div></div>
-      <div class="pt"><div class="lg"><img src="assets/logo-gold.png" alt="街角家標誌" onerror="this.parentNode.remove()"></div><h3>街角家關懷協會</h3><div class="unit">主辦單位</div></div>
+  </div>
+  <div class="marquee" id="partnerMq">
+    <ul class="mq-track" aria-label="主辦、協辦與補助單位">
+        <li class="mq-card"><div class="nm"><span class="tier-tag">主辦單位</span><h4>街角家關懷協會</h4></div></li>
+        <li class="mq-card"><div class="lg"><img src="assets/partner-mratc.png" alt="台中市康復之友協會標誌" onerror="this.parentNode.remove()"></div><div class="nm"><span class="tier-tag">協辦單位</span><h4>台中市康復之友協會</h4></div></li>
+        <li class="mq-card"><div class="lg"><img src="assets/partner-jubilee.png" alt="台灣國際禧年關懷協會標誌" onerror="this.parentNode.remove()"></div><div class="nm"><span class="tier-tag">協辦單位</span><h4>平等街小站</h4><span class="unit">台灣國際禧年關懷協會</span></div></li>
+        <li class="mq-card"><div class="lg"><img src="assets/partner-care.png" alt="臺中市助扶關懷協會標誌" onerror="this.parentNode.remove()"></div><div class="nm"><span class="tier-tag">協辦單位</span><h4>耕水小子</h4><span class="unit">臺中市助扶關懷協會</span></div></li>
+        <li class="mq-card"><div class="lg"><img src="assets/partner-lourdes.png" alt="露德協會標誌" onerror="this.parentNode.remove()"></div><div class="nm"><span class="tier-tag">協辦單位</span><h4>朝露農場</h4><span class="unit">露德協會</span></div></li>
+        <li class="mq-card"><div class="lg"><img src="assets/partner-tfd.png" alt="財團法人臺灣民主基金會標誌" onerror="this.parentNode.remove()"></div><div class="nm"><span class="tier-tag">補助單位</span><h4>財團法人臺灣民主基金會</h4></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 主辦單位 -->
+<section class="band white reveal" id="host">
+  <div class="wrap host">
+    <div>
+      <img class="logo" src="assets/logo-gold.png" alt="街角家 Home Street Home 標誌">
+      <h2>關於主辦單位・街角家</h2>
+      <p class="org">台灣街角家關懷協會（台中石頭湯）</p>
+      <p class="tag">做極端貧困者的倚靠、無助者的家。</p>
+      <p>街角家是一個在台中服務無家者的社福組織，關注城市裡不同型態的貧窮。一方面提供貧窮者生活支持、社區培力、義診與藝術療癒等直接服務；另一方面透過線下的倡議行動，幫助大眾理解貧窮的多元面向，減少對貧窮者的恐懼、污名與社會排除，一起搭建友善而共融的社會。</p>
+      <p>2024 年起，街角家把「窮學盟」每年舉辦的大型倡議行動〈貧窮人的台北〉帶到台中，發起「貧窮人的台中」，決心深耕這座城市裡的貧窮議題。</p>
+      <div class="chips"><span class="chip">直接服務</span><span class="chip">社區培力</span><span class="chip">貧窮倡議</span><span class="chip">共融社會</span></div>
+    </div>
+    <div class="host-media">
+      <a class="host-photo" href="https://www.facebook.com/HomeStreetHome.tc/" target="_blank" rel="noopener noreferrer"><img src="assets/host-team.jpg" alt="街角家夥伴合影"></a>
+      <a class="host-fb" href="https://www.facebook.com/HomeStreetHome.tc/" target="_blank" rel="noopener noreferrer"><span class="fbi"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.6V3.9c-.3 0-1.3-.1-2.4-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.6v3h2.4v8z"/></svg></span>追蹤街角家 Facebook</a>
+    </div>
+  </div>
+</section>
+
+<!-- 貧中緣起 -->
+<section class="band pink reveal" id="origin">
+  <div class="wrap">
+    <div class="sec-head"><h2>貧中緣起</h2></div>
+    <p class="origin-big">唯有透過貧窮，才能理解貧窮，<br class="d">而能穿越貧窮。</p>
+    <div class="origin-cols">
+      <div><span class="yr">2017</span><p>由台北萬華的眾 NGO 組成了「窮學盟」（向貧窮者學習行動聯盟），開創大型貧窮倡議行動「貧窮人的台北」。</p></div>
+      <div><span class="yr">2024</span><p>第一屆「貧窮人的台中」在與「貧窮人的台北」的串連之下誕生。我們希望開創一場以貧窮經驗者為主體的行動，將舞台交給被忽略的、受制的、失語的人們，在足夠安全、被尊重的發言空間下，產生貧窮者的主體和連結的可能。</p></div>
+    </div>
+    <div class="keys"><span>看見</span><span>聆聽</span><span>體會</span><span>團結</span></div>
+    <div class="origin-end">
+      <p>我們以靜態展覽、議題講座、真人圖書館、跨領域串聯活動等多元的形式邀請社會大眾參與，嘗試撐開議題的空間，讓每個人能夠以最自在的方式了解與探索，以理解取代污名，以連結取代排除。</p>
+      <p>向貧窮者學習，刻劃出貧窮人的台中。我們將這場倡議行動扎根於台中，為中部地區帶來接觸議題的入口，也串聯在地的多個組織，讓每一場在地經驗與對話相互交織，陪伴中部的貧窮者們一起練習梳理、表達自身的生命故事，長出貧窮人的台中。</p>
+      <a class="ext" href="https://doyouaflavor.tw/inadequate/" target="_blank" rel="noopener noreferrer">認識「貧窮人的台北」<svg class="icon" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      <p class="sun">「今天繁華的台北，不單是成功的人、有錢人的台北；也應該是挫折的人、貧窮人的台北。」<cite>孫大川〈貧窮人的台北發起書〉</cite></p>
     </div>
   </div>
 </section>
@@ -517,75 +840,13 @@
   </div>
 </section>
 
-<!-- 貧中緣起 -->
-<section class="band pink reveal" id="origin">
-  <div class="wrap">
-    <div class="sec-head"><h2>貧中緣起</h2></div>
-    <p class="origin-big">唯有透過貧窮，才能理解貧窮，<br class="d">而能穿越貧窮。</p>
-    <div class="origin-cols">
-      <div><span class="yr">2017</span><p>由台北萬華的眾 NGO 組成了「窮學盟」（向貧窮者學習行動聯盟），開創大型貧窮倡議行動「貧窮人的台北」。</p></div>
-      <div><span class="yr">2024</span><p>第一屆「貧窮人的台中」在與「貧窮人的台北」的串連之下誕生。我們希望開創一場以貧窮經驗者為主體的行動，將舞台交給被忽略的、受制的、失語的人們，在足夠安全、被尊重的發言空間下，產生貧窮者的主體和連結的可能。</p></div>
-    </div>
-    <div class="keys"><span>看見</span><span>聆聽</span><span>體會</span><span>團結</span></div>
-    <div class="origin-end">
-      <p>我們以靜態展覽、議題講座、真人圖書館、跨領域串聯活動等多元的形式邀請社會大眾參與，嘗試撐開議題的空間，讓每個人能夠以最自在的方式了解與探索，以理解取代污名，以連結取代排除。</p>
-      <p>向貧窮者學習，刻劃出貧窮人的台中。我們將這場倡議行動扎根於台中，為中部地區帶來接觸議題的入口，也串聯在地的多個組織，讓每一場在地經驗與對話相互交織，陪伴中部的貧窮者們一起練習梳理、表達自身的生命故事，長出貧窮人的台中。</p>
-      <a class="ext" href="https://doyouaflavor.tw/inadequate/" target="_blank" rel="noopener noreferrer">認識「貧窮人的台北」<svg class="icon" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-      <p class="sun">「今天繁華的台北，不單是成功的人、有錢人的台北；也應該是挫折的人、貧窮人的台北。」<cite>孫大川〈貧窮人的台北發起書〉</cite></p>
-    </div>
-  </div>
-</section>
-
-<!-- 主辦單位 -->
-<section class="band white reveal" id="host">
-  <div class="wrap host">
-    <div>
-      <img class="logo" src="assets/logo-gold.png" alt="街角家 Home Street Home 標誌">
-      <h2>關於主辦單位・街角家</h2>
-      <p class="org">台灣街角家關懷協會（台中石頭湯）</p>
-      <p class="tag">做極端貧困者的倚靠、無助者的家。</p>
-      <p>街角家是一個在台中服務無家者的社福組織，關注城市裡不同型態的貧窮。一方面提供貧窮者生活支持、社區培力、義診與藝術療癒等直接服務；另一方面透過線下的倡議行動，幫助大眾理解貧窮的多元面向，減少對貧窮者的恐懼、污名與社會排除，一起搭建友善而共融的社會。</p>
-      <p>2024 年起，街角家把「窮學盟」每年舉辦的大型倡議行動〈貧窮人的台北〉帶到台中，發起「貧窮人的台中」，決心深耕這座城市裡的貧窮議題。</p>
-      <div class="chips"><span class="chip">直接服務</span><span class="chip">社區培力</span><span class="chip">貧窮倡議</span><span class="chip">共融社會</span></div>
-    </div>
-    <div class="host-media">
-      <a class="host-photo" href="https://www.facebook.com/HomeStreetHome.tc/" target="_blank" rel="noopener noreferrer"><img src="assets/host-team.jpg" alt="街角家夥伴合影"></a>
-      <a class="host-fb" href="https://www.facebook.com/HomeStreetHome.tc/" target="_blank" rel="noopener noreferrer"><span class="fbi"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.6V3.9c-.3 0-1.3-.1-2.4-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.6v3h2.4v8z"/></svg></span>追蹤街角家 Facebook</a>
-    </div>
-  </div>
-</section>
-
-<!-- 展覽資訊＋支持 -->
-<section class="band paper reveal" id="info">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>2026 貧窮人的台中</h2>
-      <p>聆聽失序之聲</p>
-    </div>
-    <div class="info">
-      <div><div class="k">展期</div><div class="v big">11.15 – 11.29</div></div>
-      <div><div class="k">地點</div><div class="v">文化部文化資產園區<br>衙道堂 B05 多功能空間</div></div>
-    </div>
-    <p class="closing">「沒有人能夠獨自承受世間的苦痛，我們都需要同伴，才能勇敢的負傷前行。」<cite>《希望的秘密》</cite></p>
-    <div class="support">
-      <div>
-        <h3>支持我們</h3>
-        <p>「貧窮人的台中」是非營利的倡議行動，仰賴大眾的捐款持續舉辦。邀請你一起支持。</p>
-      </div>
-      <div class="sp-links">
-        <a class="sp-btn primary" href="https://neti.cc/LYZnWoW" target="_blank" rel="noopener noreferrer">立即捐款<small>支持行動持續發生</small></a>
-        <a class="sp-btn ghost" href="https://reurl.cc/LQry54" target="_blank" rel="noopener noreferrer">捐款徵信<small>查看善款用途與流向</small></a>
-      </div>
-    </div>
-  </div>
-</section>
 
 <footer>
   <div class="wrap">
     <div class="fl">貧窮人的台中</div>
     <div class="fs">聆聽失序之聲・2026</div>
     <p>由街角家與台中多個議題組織共同發起的大型貧窮倡議行動，以看見、聆聽、體會、團結為核心，陪伴貧窮經驗者發聲，共同前行。</p>
-    <p>主辦：台灣街角家關懷協會（台中石頭湯）｜合作：台中市康復之友協會、耕水小子、旌旗教會平等街關懷小站、露德協會朝露農場</p>
+    <p>主辦：街角家關懷協會｜協辦：台中市康復之友協會、台灣國際禧年關懷協會平等街小站、耕水小子臺中市助扶關懷協會、露德協會朝露農場｜補助：財團法人臺灣民主基金會</p>
     <p>© 2026 貧窮人的台中</p>
   </div>
 </footer>
@@ -606,6 +867,20 @@
 
   const tabs=[...document.querySelectorAll('.tab')];
   tabs.forEach(t=>t.addEventListener('click',()=>tabs.forEach(x=>{const on=x===t;x.setAttribute('aria-selected',on);document.getElementById(x.getAttribute('aria-controls')).hidden=!on;})));
+
+  // 捐款區進場
+  const sb=document.getElementById('supportBox');
+  if(sb&&matchMedia('(prefers-reduced-motion: reduce)').matches)sb.classList.add('on');
+  if(sb){const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){sb.classList.add('on');o.disconnect();}}),{threshold:.3});o.observe(sb);}
+  // 合作組織跑馬燈：複製到足夠長度以無縫循環
+  const mq=document.querySelector('#partnerMq .mq-track');
+  if(mq&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    const base=[...mq.children];
+    const fill=()=>{while(mq.scrollWidth<innerWidth*1.2){base.forEach(n=>{const c=n.cloneNode(true);c.setAttribute('aria-hidden','true');mq.appendChild(c);});}};
+    fill();
+    [...mq.children].forEach(n=>{const c=n.cloneNode(true);c.setAttribute('aria-hidden','true');mq.appendChild(c);});
+    mq.style.setProperty('--mq-dur',Math.round(mq.scrollWidth/2/45)+'s');
+  }
 
   // 數字動畫（HTML 已寫入實際數字，未執行 JS 時也會正確顯示）
   function runCount(el){const target=+el.dataset.target,suffix=el.dataset.suffix||'',t0=performance.now();

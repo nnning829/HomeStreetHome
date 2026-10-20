@@ -417,6 +417,85 @@
     .story p.bridge{text-align:left;text-align-last:left}
   }
 
+  /* ---------- 主視覺（主視覺圖） ---------- */
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .hero-img{background:#e04f95 url("assets/bg-pink.jpg") center/cover;padding-top:76px}
+  .hero-img img{display:block;width:100%;max-width:1600px;height:auto;margin:0 auto}
+  @media(max-width:1040px){.hero-img{padding-top:64px}}
+
+  /* ---------- 行事曆 ---------- */
+  #events .sec-head h2,#events .sec-head p{color:#fff}
+  #events .sec-head h2 .pre{color:var(--ink)}
+  #events .expo{margin-bottom:40px}
+  .cal-hint{text-align:center;color:#fff;font-weight:700;font-size:.98rem;margin-bottom:18px;letter-spacing:.06em}
+  .cal{display:grid;grid-template-columns:repeat(3,1fr);column-gap:0;row-gap:34px;font-family:var(--body)}
+  .ccol{display:flex;flex-direction:column}
+  .cd{display:flex;align-items:flex-end;gap:6px;padding:0 0 4px 2px;color:var(--ink);line-height:1}
+  .cd b{font-family:"Noto Sans TC",sans-serif;font-weight:700;font-size:clamp(2rem,3.4vw,2.7rem);letter-spacing:-.01em}
+  .cd span{display:flex;flex-direction:column;font-weight:700;font-size:.78rem;line-height:1.05;padding-bottom:4px}
+  .cd i{font-style:normal}
+  .cpanel{position:relative;flex:1;display:flex;flex-direction:column;background:var(--ink);border-left:1px solid rgba(255,255,255,.18)}
+  .ccol:first-child .cpanel,.ccol:nth-child(4) .cpanel{border-left:0}
+  .cpanel.end{justify-content:flex-end}
+  .cpanel.fit{flex:none}
+  .ccol .cd+.cpanel.fit+.cd{margin-top:14px}
+  .ce{display:flex;flex-direction:column;color:#fff;transition:background .2s}
+  .ce:hover{background:#2c211d}
+  .ct{display:block;background:#fff;color:var(--pink);text-align:center;font-weight:700;letter-spacing:.14em;font-size:.95rem;padding:5px 8px}
+  .ct em{font-style:normal;margin-left:12px}
+  .cb{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:18px 16px 30px}
+  .cb b{color:#f5c33b;font-size:clamp(1.05rem,1.75vw,1.32rem);line-height:1.45;letter-spacing:.04em;margin-bottom:10px}
+  .cp{display:flex;flex-direction:column;gap:2px;font-size:.84rem;line-height:1.6;color:#f3ece2}
+  .go{position:absolute;right:12px;bottom:8px;display:inline-flex;align-items:center;gap:3px;font-size:.75rem;font-weight:700;color:#f5c33b;opacity:.75;transition:opacity .2s}
+  .go svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.4}
+  .ce:hover .go{opacity:1}
+  .ce:hover .cb b{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:2px}
+  .ce:focus-visible{outline:3px solid #f5c33b;outline-offset:-3px}
+  .cs{position:absolute;pointer-events:none}
+  .cs.y{width:56px;top:46%;left:26%;transform:rotate(-10deg)}
+  .cs.w{width:84px;top:-34px;left:58%;fill:#fff}
+  .cs.o{width:84px;top:-60px;right:-14px;fill:none;stroke:var(--ink);stroke-width:4}
+  .cal-foot{color:#fff;font-weight:700;letter-spacing:.08em;margin-top:22px;font-size:1rem}
+  .cal-reg{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:22px}
+  .cal-reg span{color:#fff;font-weight:700;margin-right:6px}
+  .cal-reg a{background:var(--ink);color:#f5c33b;font-weight:700;font-size:.92rem;padding:8px 18px;border-radius:40px;transition:background .2s,color .2s}
+  .cal-reg a:hover{background:#fff;color:var(--pink-deep)}
+  @media(max-width:860px){
+    .cal{grid-template-columns:1fr;row-gap:26px}
+    .cpanel{border-left:0}
+    .cpanel.end{justify-content:flex-start}
+    .cs{display:none}
+    .ccol .cd+.cpanel.fit+.cd{margin-top:26px}
+  }
+
+  /* ---------- 支持我們：照片背景 ---------- */
+  #support.band.white{background:linear-gradient(180deg,rgba(35,18,22,.62),rgba(35,18,22,.72)),url("assets/support-photo.jpg") center 40%/cover;padding:140px 0}
+  #support .closing{color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.4)}
+  #support .closing cite{color:var(--gold)}
+  #support .support{background-color:rgba(255,255,255,.92)}
+
+  /* ---------- 單行排列修正 ---------- */
+  .panel .pq{text-align:center}
+  .sec-head p{text-align-last:center}
+  .tabs{flex-wrap:nowrap}
+  .tab{white-space:nowrap}
+  .cal-reg{flex-wrap:nowrap}
+  .cal-reg a{white-space:nowrap}
+  @media(max-width:760px){
+    .tabs{gap:2px;padding:4px}
+    .tab{font-size:.88rem;padding:8px 11px}
+    .cal-reg{flex-wrap:wrap;gap:6px}
+    .cal-reg span{flex-basis:100%;margin:0 0 4px}
+    .cal-reg a{flex:1 1 auto;text-align:center;font-size:.8rem;padding:8px 9px}
+    .sec-head p:not(.lead-tag){text-align-last:center}
+  }
+  @media(max-width:520px){
+    .tabs{display:grid;grid-template-columns:1fr 1fr;width:100%;border-radius:18px}
+    .tab{padding:9px 6px}
+    .cal-reg{display:grid;grid-template-columns:1fr 1fr}
+    .cal-reg span{grid-column:1/-1}
+  }
+
   @media(max-width:600px){br.d{display:none}.story{text-align:left}.story p.bridge::before{margin-left:0}}
   @media(prefers-reduced-motion:reduce){.ticker .tk{animation:none}.reveal{opacity:1;transform:none;transition:none}}
 </style>
@@ -440,33 +519,9 @@
 </header>
 
 <!-- 主視覺 -->
-<section class="hero" id="top">
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-    <radialGradient id="planet" cx="40%" cy="35%" r="75%"><stop offset="0%" stop-color="#2a2019"/><stop offset="70%" stop-color="#17110f"/><stop offset="100%" stop-color="#0c0908"/></radialGradient>
-  </defs></svg>
-  <img class="scrib" src="assets/star.png" alt="" style="width:60px;top:14%;left:6%;transform:rotate(-14deg)">
-  <svg class="scrib hide-m" style="bottom:16%;left:8%;width:56px" viewBox="0 0 64 40" aria-hidden="true"><path d="M4,22 q10,-16 20,0 q10,16 20,0 q8,-13 16,-2" stroke="#f5eddf" stroke-width="4" fill="none" stroke-linecap="round" opacity=".7"/></svg>
-  <div class="hero-grid wrap">
-    <div class="hero-inner">
-      <span class="htag">2026 貧窮人的台中</span>
-      <h1><img src="assets/title-white.png" alt="聆聽失序之聲"></h1>
-      <p class="hero-lead">「我們都害怕混亂，喜歡安穩清晰，但混亂裡有誠實的聲音。」<cite>《受苦的倒影》</cite></p>
-      <div class="date-star">
-        <img class="dt" src="assets/date.png" alt="11月15日至11月29日">
-        <div class="p">文化部文化資產園區<br>衡道堂</div>
-      </div>
-      <div class="hero-org"><b>主辦</b>台灣街角家關懷協會</div>
-    </div>
-    <div class="hero-art">
-      <svg class="blob" viewBox="0 0 600 600" aria-hidden="true">
-        <path fill="url(#planet)" d="M300,40 C420,30 520,120 540,250 C560,370 500,500 360,540 C240,575 90,540 50,410 C10,290 60,150 160,90 C210,60 250,45 300,40 Z"/>
-        <g stroke="#3a2c25" stroke-width="1.1" fill="none" opacity=".8"><path d="M120,180 C220,140 340,160 430,230"/><path d="M110,260 C230,230 360,250 460,320"/><path d="M130,340 C240,320 370,340 450,400"/><path d="M160,420 C260,410 360,430 430,470"/></g>
-        <g fill="#eab94a"><path d="M430,150 l14,30 l32,4 l-24,22 l7,32 l-29,-16 l-29,16 l7,-32 l-24,-22 l32,-4 Z" opacity=".95"/><circle cx="360" cy="300" r="7"/><path d="M250,470 l8,17 l19,2 l-14,13 l4,19 l-17,-9 l-17,9 l4,-19 l-14,-13 l19,-2 Z" opacity=".9"/></g>
-        <g fill="#d94b8e" opacity=".9"><circle cx="300" cy="360" r="14"/><path d="M470,360 q20,-6 34,8 q-8,20 -30,16 q-14,-10 -4,-24 Z"/></g>
-        <g stroke="#f5eddf" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".9"><path d="M180,110 l-16,26 l20,10 l-18,26"/><path d="M120,470 l16,22 l-20,10 l16,22"/></g>
-      </svg>
-    </div>
-  </div>
+<section class="hero-img" id="top">
+  <h1 class="sr">2026 第二屆 貧窮人的台中：聆聽失序之聲 Hearing the Chaos｜11/15–11/29 展覽、講座、工作坊｜文化部文化資產園區衡道堂</h1>
+  <img src="assets/hero-banner.jpg" alt="2nd 貧窮人的台中：聆聽失序之聲 Hearing the Chaos。11/15 至 11/29（日），展覽 × 講座 × 工作坊，文化資產園區衡道堂。肉眼所見的真實，在表象的、秩序之下，有伏流，甚至有狂風暴雨。" width="1280" height="640">
 </section>
 
 <div class="ticker" aria-hidden="true">
@@ -502,7 +557,7 @@
 </section>
 
 <!-- 展覽與活動＆報名連結 -->
-<section class="band sand reveal" id="events">
+<section class="band pink reveal" id="events">
   <div class="wrap">
     <div class="sec-head">
       <h2><span class="pre">2026 貧窮人的台中</span>展覽與活動</h2>
@@ -522,170 +577,23 @@
       <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%96%87%E5%8C%96%E9%83%A8%E6%96%87%E5%8C%96%E8%B3%87%E7%94%A2%E5%9C%92%E5%8D%80%20%E8%A1%A1%E9%81%93%E5%A0%82" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>在 Google 地圖查看</a>
     </div>
 
-    <!-- 01 -->
-    <article class="cat" id="cat-1">
-      <header class="cat-head">
-        <div>
-          <span class="cat-n">01</span>
-          <h3>開幕式・舞蹈劇場・閉幕式</h3>
-          <p class="cat-desc">歡迎你與我們一起熱鬧的揭開序幕，也與我們呼出一口氣，暫時的、寫下逗號……</p>
-        </div>
-        <a class="reg" href="https://neti.cc/AbOmMyk" target="_blank" rel="noopener noreferrer">立即報名<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-      </header>
-      <ol class="sessions">
-        <li class="ss">
-          <div class="when"><b>11/15</b><span>週日</span></div>
-          <div class="what">
-            <h4>開幕式暨舞蹈劇場</h4>
-            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>10:00 – 12:30</span><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>文化部文化資產園區衡道堂</span></div>
-            <p>開幕式將邀請「貧窮人的台中」所有參展團隊，共同揭開《聆聽失序之聲》的序幕，探索流動的貧窮、失序狀態的聆聽經驗；開幕式尾聲也邀請到無垢舞蹈劇場的舞者進行演出。這場盛宴，讓我們一起來共襄盛舉！</p>
-            <p class="who">出席單位：平等街小站：禧年關懷協會｜台中市康復之友協會｜耕水小子：臺中市助扶關懷協會｜朝露農場：社團法人台灣露德協會｜街角家關懷協會<small>以上依單位名稱筆劃順序排列</small></p>
-          </div>
-        </li>
-        <li class="ss">
-          <div class="when"><b>11/29</b><span>週日</span></div>
-          <div class="what">
-            <h4>閉幕式：聆聽「聆聽之人」的聲音</h4>
-            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>19:00 – 21:30</span><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>文化部文化資產園區衡道堂</span></div>
-            <p>一場閉幕式，讓策展團隊能述說這一年來籌備的心血，我們練習聽，也練習說。</p>
-          </div>
-        </li>
-      </ol>
-    </article>
-
-    <!-- 02 -->
-    <article class="cat" id="cat-2">
-      <header class="cat-head">
-        <div>
-          <span class="cat-n">02</span>
-          <h3>系列專題講座</h3>
-          <p class="cat-tag">聆聽之外，我們再進一步深探</p>
-        </div>
-        <a class="reg" href="https://neti.cc/7zgwy1E" target="_blank" rel="noopener noreferrer">立即報名<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-      </header>
-      <ol class="sessions">
-        <li class="ss">
-          <div class="when"><b>11/21</b><span>週六</span></div>
-          <div class="what">
-            <h4>《脆弱製造 X 后里自造》</h4>
-            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>10:00 – 12:00</span><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>文化部文化資產園區衡道堂</span></div>
-            <p class="who">講者：林秉賢｜東海大學社會工作學系教授、黃仁祈｜耕水小子：臺中市助扶關懷協會執行長</p>
-          </div>
-        </li>
-        <li class="ss">
-          <div class="when"><b>11/21</b><span>週六</span></div>
-          <div class="what">
-            <h4>《看見結構的傷，與受苦者同行》</h4>
-            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>14:00 – 16:30</span><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>文化部文化資產園區小禮堂</span></div>
-            <p class="who">講者：彭仁郁｜中研院民族所副研究員／《家的蜃樓》作者</p>
-          </div>
-        </li>
-        <li class="ss">
-          <div class="when"><b>11/27</b><span>週五</span></div>
-          <div class="what">
-            <h4>《朝露農場期末成果發表會暨座談會》</h4>
-            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>09:30 – 12:30</span><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>文化部文化資產園區小禮堂</span></div>
-            <p class="who">講者：徐森杰｜露德協會秘書長、伊魯秀｜露德協會主任、朝露男子代表</p>
-          </div>
-        </li>
-        <li class="ss">
-          <div class="when"><b>11/29</b><span>週日</span></div>
-          <div class="what">
-            <h4>《最終，我們所抵抗的，會是什麼呢？》</h4>
-            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>14:00 – 17:00</span><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>文化部文化資產園區衡道堂</span></div>
-            <p class="who">講者：魏明毅｜《受苦的倒影》、《靜寂工人》作者</p>
-          </div>
-        </li>
-      </ol>
-    </article>
-
-    <!-- 03 -->
-    <article class="cat" id="cat-3">
-      <header class="cat-head">
-        <div>
-          <span class="cat-n">03</span>
-          <h3>田野花絮對談</h3>
-          <p class="cat-tag">聆聽之中，聆聽者聽見了什麼</p>
-          <p class="cat-desc">地點皆在文化部文化資產園區衡道堂</p>
-        </div>
-        <a class="reg" href="https://neti.cc/lJjko12" target="_blank" rel="noopener noreferrer">立即報名<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-      </header>
-      <ol class="sessions">
-        <li class="ss">
-          <div class="when"><b>11/15</b><span>週日</span></div>
-          <div class="what">
-            <h4>《孩子，你是怎麼長大的？》</h4>
-            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>14:00 – 16:00</span></div>
-            <p class="who">與談：盧貞築｜耕水小子資源開發組品牌經理、黃子綺｜耕水小子資源開發組設計師、曾雅筑、易冠霈、許芳羿、劉欣語｜貧中脆家兒少組田野及攝影夥伴</p>
-          </div>
-        </li>
-        <li class="ss">
-          <div class="when"><b>11/20</b><span>週五</span></div>
-          <div class="what">
-            <h4>《浪跡的交錯：關於意外、墜落與韌性生命》</h4>
-            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>19:00 – 21:00</span></div>
-            <p class="who">與談：陳郁茹、劉覲華、吳杰霖、許淨茹｜無家者組田野夥伴與街頭大哥們</p>
-          </div>
-        </li>
-        <li class="ss">
-          <div class="when"><b>11/22</b><span>週日</span></div>
-          <div class="what">
-            <h4>《症狀之外，尋找心靈語言的自我追問》</h4>
-            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>19:00 – 21:00</span></div>
-            <p class="who">與談：楊小豌、温易珊、賴泱丞、陳筠今｜貧中田野夥伴</p>
-          </div>
-        </li>
-        <li class="ss">
-          <div class="when"><b>11/23</b><span>週一</span></div>
-          <div class="what">
-            <h4>《那些婦女的故事：關於斷裂、破碎與愛》</h4>
-            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>19:00 – 21:00</span></div>
-            <p class="who">與談：顏均容、蔡旻儒｜女性無家者組田野夥伴；郭大姐｜街頭大姐</p>
-          </div>
-        </li>
-      </ol>
-    </article>
-
-    <!-- 04 -->
-    <article class="cat" id="cat-4">
-      <header class="cat-head">
-        <div>
-          <span class="cat-n">04</span>
-          <h3>藝術、戲劇共融創作工作坊</h3>
-          <p class="cat-tag">聽～聽見他人與自己</p>
-          <p class="cat-desc">語言是有限的。這次，讓我們透過藝術、戲劇創作，來感受議題與我們之間的關聯，更立體的把自己的感受放置進來，帶著自己的經驗，與比我們更大一點的社會相遇，與不同的經驗、感受產生連結。地點皆在文化部文化資產園區衡道堂。</p>
-        </div>
-        <a class="reg" href="https://neti.cc/nZ7yN5q" target="_blank" rel="noopener noreferrer">立即報名<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-      </header>
-      <ol class="sessions">
-        <li class="ss">
-          <div class="when"><b>11/15</b><span>週日</span></div>
-          <div class="what">
-            <h4>《安定與未定之間》藝術共創工作坊</h4>
-            <p class="en">The Settled and Unsettled in Life</p>
-            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>18:30 – 21:00</span></div>
-            <p class="who">帶領者：林彥廷｜藝術治療師／平權共融倡議者</p>
-          </div>
-        </li>
-        <li class="ss">
-          <div class="when"><b>11/21</b><span>週六</span></div>
-          <div class="what">
-            <h4>《欸？這樣不太對勁⋯⋯？》戲劇工作坊</h4>
-            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>18:30 – 21:30</span></div>
-            <p class="who">帶領者：嘉敏（Carmen Lee）｜應用劇場工作者、參與式促導者</p>
-          </div>
-        </li>
-        <li class="ss">
-          <div class="when"><b>11/22</b><span>週日</span></div>
-          <div class="what">
-            <h4>《失序之外，共在之中》藝術共創工作坊</h4>
-            <p class="en">Beyond Disorder, Being Together</p>
-            <div class="meta"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>14:30 – 17:00</span></div>
-            <p class="who">帶領者：林彥廷｜藝術治療師／平權共融倡議者</p>
-          </div>
-        </li>
-      </ol>
-    </article>
+    <p class="cal-hint">點選行事曆上的活動，即可前往該場報名頁面</p>
+    <div class="cal">
+      <div class="ccol"><div class="cd"><b>11/15</b><span><i>日</i><i>SUN</i></span></div><div class="cpanel"><a class="ce" href="https://neti.cc/AbOmMyk" target="_blank" rel="noopener noreferrer"><span class="ct">10:00 – 12:30<em>衡道堂</em></span><span class="cb"><b>《貧窮人的台中》<br>開幕記者會暨舞蹈劇場</b><span class="cp"><span>參展單位：台中市康復之友協會、台灣國際禧年關懷協會、台灣街角家關懷協會、耕水小子：臺中市助扶關懷協會、朝露農場：社團法人台灣露德協會</span></span><span class="go">報名<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span></a><a class="ce" href="https://neti.cc/lJjko12" target="_blank" rel="noopener noreferrer"><span class="ct">14:00 – 16:00<em>衡道堂</em></span><span class="cb"><b>孩子你是怎麼長大的？</b><span class="cp"><span>盧貞築｜耕水小子 品牌經理</span><span>黃子綺｜耕水小子 設計師</span><span>曾雅筑、易冠霈｜脆家兒少組</span><span>許芳羿、劉欣語｜田野及攝影夥伴</span></span><span class="go">報名<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span></a><a class="ce" href="https://neti.cc/nZ7yN5q" target="_blank" rel="noopener noreferrer"><span class="ct">18:30 – 21:00<em>衡道堂</em></span><span class="cb"><b>《安定與未定之間》<br>藝術共創工作坊</b><span class="cp"><span>林彥廷｜藝術治療師、平權共融倡議者</span></span><span class="go">報名<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span></a></div></div>
+      <div class="ccol"><div class="cd"><b>20</b><span><i>五</i><i>FRI</i></span></div><div class="cpanel end"><svg class="cs w" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 4l11 30 33-6-24 22 20 30-32-12-12 28-6-32-34 6 26-22-18-26 30 10z"/></svg><img class="cs y" src="assets/star.png" alt="" aria-hidden="true"><a class="ce" href="https://neti.cc/lJjko12" target="_blank" rel="noopener noreferrer"><span class="ct">19:00 – 21:00<em>衡道堂</em></span><span class="cb"><b>浪跡的交錯：<br>關於意外、墜落與韌性生命</b><span class="cp"><span>陳郁茹、劉覲華、吳杰霖、許淨茹｜無家者組田野夥伴</span><span>＆街頭大哥們</span></span><span class="go">報名<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span></a></div></div>
+      <div class="ccol"><div class="cd"><b>21</b><span><i>六</i><i>SAT</i></span></div><div class="cpanel"><a class="ce" href="https://neti.cc/7zgwy1E" target="_blank" rel="noopener noreferrer"><span class="ct">10:00 – 12:00<em>衡道堂</em></span><span class="cb"><b>脆弱製造 X 后里自造</b><span class="cp"><span>林秉賢｜東海大學社會工作學系教授</span><span>黃仁祈｜耕水小子：臺中市助扶關懷協會執行長</span></span><span class="go">報名<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span></a><a class="ce" href="https://neti.cc/7zgwy1E" target="_blank" rel="noopener noreferrer"><span class="ct">14:00 – 16:00<em>小禮堂</em></span><span class="cb"><b>看見結構的傷，與受苦者同行</b><span class="cp"><span>彭仁郁｜中研院民族所副研究員、《家的蜃樓》作者</span></span><span class="go">報名<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span></a><a class="ce" href="https://neti.cc/nZ7yN5q" target="_blank" rel="noopener noreferrer"><span class="ct">18:30 – 21:00<em>衡道堂</em></span><span class="cb"><b>《欸？這樣不太對勁……？》<br>戲劇工作坊</b><span class="cp"><span>嘉敏｜應用劇場工作者、參與式促導者</span></span><span class="go">報名<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span></a></div></div>
+      <div class="ccol"><div class="cd"><b>22</b><span><i>日</i><i>SUN</i></span></div><div class="cpanel end"><a class="ce" href="https://neti.cc/nZ7yN5q" target="_blank" rel="noopener noreferrer"><span class="ct">14:30 – 17:00<em>衡道堂</em></span><span class="cb"><b>《失序之外，共在之中》<br>藝術共創工作坊</b><span class="cp"><span>林彥廷｜藝術治療師、平權共融倡議者</span></span><span class="go">報名<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span></a><a class="ce" href="https://neti.cc/lJjko12" target="_blank" rel="noopener noreferrer"><span class="ct">19:00 – 21:00<em>衡道堂</em></span><span class="cb"><b>症狀之外，<br>尋找心靈語言的自我追問</b><span class="cp"><span>楊小豌、温易珊、賴泱丞、陳筠今｜精神議題組田野夥伴</span></span><span class="go">報名<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span></a></div></div>
+      <div class="ccol"><div class="cd"><b>23</b><span><i>一</i><i>MON</i></span></div><div class="cpanel fit"><a class="ce" href="https://neti.cc/lJjko12" target="_blank" rel="noopener noreferrer"><span class="ct">19:00 – 21:00<em>衡道堂</em></span><span class="cb"><b>那些婦女的故事：<br>關於斷裂、破碎與愛</b><span class="cp"><span>顏均容、蔡旻儒｜女性無家者組田野夥伴</span></span><span class="go">報名<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span></a></div><div class="cd"><b>27</b><span><i>五</i><i>FRI</i></span></div><div class="cpanel end"><a class="ce" href="https://neti.cc/7zgwy1E" target="_blank" rel="noopener noreferrer"><span class="ct">09:30 – 12:30<em>小禮堂</em></span><span class="cb"><b>朝露農場期末成果發表會<br>暨座談會</b><span class="cp"><span>社團法人台灣露德協會：徐森杰秘書長、伊魯秀主任、朝露男子代表</span></span><span class="go">報名<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span></a></div></div>
+      <div class="ccol"><div class="cd"><b>29</b><span><i>日</i><i>SUN</i></span></div><div class="cpanel end"><svg class="cs o" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 4l11 30 33-6-24 22 20 30-32-12-12 28-6-32-34 6 26-22-18-26 30 10z"/></svg><a class="ce" href="https://neti.cc/7zgwy1E" target="_blank" rel="noopener noreferrer"><span class="ct">14:00 – 17:00<em>衡道堂</em></span><span class="cb"><b>最終，我們所抵抗的，<br>會是什麼呢？</b><span class="cp"><span>魏明毅｜《受苦的倒影》、《靜寂工人》作者</span></span><span class="go">報名<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span></a><a class="ce" href="https://neti.cc/AbOmMyk" target="_blank" rel="noopener noreferrer"><span class="ct">19:00 – 21:30<em>衡道堂</em></span><span class="cb"><b>《貧窮人的台中》展覽閉幕式：<br>聆聽「聆聽之人」的聲音</b><span class="cp"><span>貧中策展團隊夥伴</span></span><span class="go">報名<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></span></a></div></div>
+    </div>
+    <p class="cal-foot">地點：文化部文化資產園區（台中市南區復興路三段 362 號）</p>
+    <div class="cal-reg">
+      <span>依類別報名</span>
+      <a href="https://neti.cc/AbOmMyk" target="_blank" rel="noopener noreferrer">開幕式・閉幕式</a>
+      <a href="https://neti.cc/7zgwy1E" target="_blank" rel="noopener noreferrer">系列專題講座</a>
+      <a href="https://neti.cc/lJjko12" target="_blank" rel="noopener noreferrer">田野花絮對談</a>
+      <a href="https://neti.cc/nZ7yN5q" target="_blank" rel="noopener noreferrer">共融創作工作坊</a>
+    </div>
   </div>
 </section>
 

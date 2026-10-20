@@ -277,9 +277,9 @@
   /* ---------- 關於今年（敘事） ---------- */
   .sec-head .lead-tag{font-family:var(--display);font-weight:700;font-size:clamp(1.1rem,2.2vw,1.3rem);color:var(--pink-deep);margin-top:16px}
   .story{max-width:34em;margin:0 auto;text-align:center}
-  .story p{font-size:1.08rem;line-height:2.15;color:var(--text);margin-bottom:26px}
-  .story p.open{font-family:var(--display);font-weight:700;font-size:clamp(1.25rem,2.6vw,1.5rem);line-height:1.9;color:var(--ink)}
-  .story p.ask b{color:var(--ink);font-weight:700;background:linear-gradient(transparent 62%,rgba(234,185,74,.45) 62%)}
+  .story p{font-family:var(--body);font-size:1.08rem;line-height:2.15;letter-spacing:.02em;color:var(--text);margin-bottom:26px}
+  .story p.open{color:var(--ink);font-weight:500}
+  .story p.ask b{color:var(--ink);font-weight:700}
   .story p.bridge{font-family:var(--display);font-weight:700;font-size:1.25rem;color:var(--pink-deep);margin:40px 0 0}
   .story p.bridge::before{content:"";display:block;width:34px;height:3px;border-radius:2px;background:var(--gold);margin:0 auto 26px}
 
@@ -287,14 +287,14 @@
   .voice{padding:112px 0;color:var(--cream);text-align:center;overflow:hidden;
     background:linear-gradient(180deg,rgba(15,11,10,.55),rgba(15,11,10,.9)),url("assets/photo-disorder.jpg") center 30%/cover,radial-gradient(ellipse at 60% 20%,#3a3950 0%,#1d1c2a 45%,#100c0b 100%)}
   .voice .wrap{max-width:860px}
-  .voice .v-lead{font-size:1.05rem;color:var(--cream-dim);margin-bottom:26px}
+  .voice .v-lead{font-size:1.05rem;line-height:2.1;color:#e9e1d4;margin-bottom:26px}
   .voice .v-big{font-family:var(--display);font-weight:700;font-size:clamp(1.45rem,3.4vw,2.15rem);line-height:1.75;color:#fff;margin:0 auto 46px;max-width:22em;text-wrap:balance}
   .voice .v-big::before{content:"";display:block;width:34px;height:3px;border-radius:2px;background:var(--gold);margin:0 auto 28px}
-  .voice .v-body{font-size:1.05rem;line-height:2.1;color:var(--cream-dim);margin-bottom:22px}
-  .voice .v-body b{color:var(--gold);font-weight:700}
+  .voice .v-body{font-size:1.05rem;line-height:2.1;color:#e9e1d4;margin-bottom:22px}
+  .voice .v-body b{color:inherit;font-weight:inherit}
   .groups5{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(234,185,74,.3);border:1px solid rgba(234,185,74,.3);border-radius:12px;overflow:hidden;margin:8px 0 34px}
   .groups5 span{background:rgba(15,11,10,.75);padding:18px 6px;font-family:var(--display);font-weight:700;color:var(--gold);font-size:1.02rem}
-  .voice .v-end{font-weight:700;color:#fff;font-size:1.06rem;line-height:2.1;max-width:34em;margin:0 auto}
+  .voice .v-end{font-weight:400;color:#e9e1d4;font-size:1.05rem;line-height:2.1;max-width:34em;margin:0 auto}
   @media(max-width:720px){.groups5{grid-template-columns:repeat(2,1fr)}.groups5 span:last-child{grid-column:span 2}}
 
   /* ---------- 展覽與活動 ---------- */
@@ -469,7 +469,8 @@
   }
 
   /* ---------- 支持我們：照片背景 ---------- */
-  #support.band.white{background:linear-gradient(180deg,rgba(35,18,22,.62),rgba(35,18,22,.72)),url("assets/support-photo.jpg") center 40%/cover;padding:140px 0}
+  #support.band.white{background:linear-gradient(180deg,rgba(20,14,12,.15) 0%,rgba(20,14,12,.35) 40%,rgba(20,14,12,.7) 100%),url("assets/support-photo.jpg") 42% 78%/cover;padding:320px 0 130px}
+  @media(max-width:760px){#support.band.white{padding:240px 0 90px;background-position:center,38% 40%}}
   #support .closing{color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.4)}
   #support .closing cite{color:var(--gold)}
   #support .support{background-color:rgba(255,255,255,.92)}
@@ -550,7 +551,7 @@
   <div class="wrap">
     <p class="v-lead">在每個看似「失序」的生命軌跡裡，都藏著一些深刻重要的經驗。</p>
     <p class="v-big">那些被稱為失序的狀態，有時既是痛苦留下的痕跡、是秩序重建前的動態過程，也是人努力活下去的策略。</p>
-    <p class="v-body">本次展覽集結<b>脆家兒少、藥癮經驗者、無家者、女性無家者與精神疾病經驗者</b>的生命，帶領我們「聆聽失序之聲」。</p>
+    <p class="v-body">本次展覽集結脆家兒少、藥癮經驗者、無家者、女性無家者與精神疾病經驗者的生命，帶領我們「聆聽失序之聲」。</p>
     <p class="v-body">我們想聽見的，不只是他們現在的樣子，還有那些樣子背後的故事：<br class="d">他們曾經歷什麼？正在面對什麼？又是如何努力生活下來的？</p>
     <p class="v-end">邀請你走入展間「聆聽失序之聲」，讓我們一同重新定義「失序」，也在這些交錯的故事中，感受彼此的連結、一起探索在脆弱中生長的力量。</p>
   </div>
@@ -651,9 +652,8 @@
     <p class="closing">「沒有人能夠獨自承受世間的苦痛，我們都需要同伴，才能勇敢的負傷前行。」<cite>《希望的秘密》</cite></p>
     <div class="support" id="supportBox">
       <span class="orb o1" aria-hidden="true"></span><span class="orb o2" aria-hidden="true"></span><span class="orb o3" aria-hidden="true"></span>
-      <img class="fstar s1" src="assets/star.png" alt="" aria-hidden="true"><img class="fstar s2" src="assets/star.png" alt="" aria-hidden="true"><img class="fstar s3" src="assets/star.png" alt="" aria-hidden="true">
       <div class="sp-text">
-        <h3><svg class="beat" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2z"/></svg>支持我們</h3>
+        <h3>支持我們</h3>
         <p>「貧窮人的台中」是非營利的倡議行動，仰賴大眾的捐款持續舉辦。邀請你一起支持。</p>
       </div>
       <div class="sp-links">
